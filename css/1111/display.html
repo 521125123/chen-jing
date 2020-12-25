@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 37.5px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            height: 200px;
+            background-color: green;
+            display: table;
+        }
+        .left, .right{
+            height: 100%;
+            display: table-cell;
+        }
+        .left{
+           width: 3rem;
+           background-color: pink; 
+        }
+        .right{
+            width: 7rem;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">我有<i>一</i>一颗<span style="display: block;">马斯克</span>的心
+    </a>  
+    <div class="box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>

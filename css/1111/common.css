@@ -1,0 +1,117 @@
+* {
+   margin: 0;
+   padding: 0;
+ }
+ a {
+   text-decoration: none;
+ }
+ html {
+   font-size: 37.5px;
+ }
+ body {
+   font-size: 12px;
+ }
+ html, body {
+   /* height: 100%; */
+   height: 100%;
+   background-color: #ee0a3b;
+ }
+ .tm_header img {
+   /* 空格 后代选择 + 兄弟选择器 > 子选择器 */
+   /* rem  相对于html的font-size单位 px 是绝对单位  */
+   /* 占满整个屏 */
+   width: 10rem; 
+ }
+ 
+ ul, li {
+   list-style: none;
+ }
+ 
+ ul.items {
+   /* 手机是retina屏 2倍相素 1px = 2个发光源  */
+   padding: 0.13333rem;
+ }
+ .flag {
+   /* 表格式布局 */
+   display: table;
+   width: 100%;
+   margin-bottom: 1px;
+   background-color: #ffffff;
+ }
+ .flag .flag-item {
+   display: table-cell;
+   vertical-align: top;
+   padding: 0.16rem 0;
+ }
+ .flag .flag-item.figure {
+   width: 2.346667rem;
+   height: 2.346667rem;
+   /* background-color: green; */
+ }
+ .flag .flag-item.figcaption {
+   /* background-color: #112233; */
+   padding-left: 0.213333rem;
+   padding-right: 0.213333rem;
+   position: relative;
+ }
+ 
+ .flag .flag-item img {
+   width: 100%;
+   height: 100%;
+   vertical-align: top;
+ }
+ 
+ .flag .flag-title a {
+   color: #333333;
+   line-height: 1.25;
+   overflow: hidden;
+   -webkit-line-clamp:2;
+ }
+ 
+ .flag .flag-price {
+   padding: 0.15rem 0 0.2rem;
+ }
+ 
+ .flag .flag-price span {
+   display: inline-block;
+   background: #ee0a3b;
+   vertical-align: middle;
+   border-radius: 0.026667rem;
+   color: #ffffff;
+   padding: 0.026667rem 0.08rem 0.0133333rem;
+   font-size: 11px;
+   font-weight: 700;
+ }
+ .flag .flag-price strong {
+   display: inline-block;
+   vertical-align: middle;
+   font-weight: 700;
+   color: #ee0a3b;
+   font-size: 16px;
+   margin-right: 0.16rem;
+ }
+ .flag .flag-price small {
+   display: inline-block;
+   vertical-align: middle;
+   font-weight: 700;
+   color: #ee0a3b;
+   font-size: 12px;
+ }
+ .flag .flag-type {
+   color: #ff3600;
+ }
+ .flag .flag-btn {
+   position: absolute;
+   right: 0.2rem;
+   bottom: 0.13333rem;
+   display: inline-block;
+   width: 2.133333rem;
+   height: 0.64rem;
+   line-height: 0.64rem;
+   background-color: #ee0a3b;
+   text-align: center;
+   color: #ffffff;
+   font-weight: 700;
+   font-size: 14px;
+   border-radius: 0.026667rem;
+ }
