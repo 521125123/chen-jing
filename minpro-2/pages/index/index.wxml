@@ -1,0 +1,23 @@
+<!-- <text class="t1">{{dailao}}</text>
+<view>
+
+    <text class="t2">hello,{{xgg}}</text>
+</view> -->
+<!-- <van-card
+    num="2"
+    price="11000.00"
+    title="iphone13"
+    desc="宇宙最香手机"
+    thumb="{{imageURL}}"
+> 
+</van-card> -->
+<van-card
+    wx:for="{{phones}}"
+    wx:for-item="phone"
+    num="{{phone.num}}"
+    price="{{phone.price}}"
+    title="{{phone.title}}"
+    desc="{{phone.desc}}"
+    thumb="{{phone.thumb}}"
+> 
+</van-card>

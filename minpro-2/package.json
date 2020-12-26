@@ -1,0 +1,15 @@
+{
+  "name": "minpro-2",
+  "version": "1.0.0",
+  "description": "- 电商来设计\r     明年是电商爆发年\r - 小程序有一个个的page构成\r     每个page分成四部分\r     index.js 提供了数据\r     index.wxml提供了html的界面\r     index.wxss 负责ganshenmo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.6.4"
+  }
+}
