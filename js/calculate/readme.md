@@ -42,7 +42,7 @@
         git config --global --replace-all user.email “你的邮箱”
         打开Viscode 到根目录
          在终端中输入 git version
-         在git init 在网站去找code的地址
+         然后git init 在网站去找code的地址
          git remote add origin（远程关联）地址
          git remote -v
          git pull origin main（拉代码）
