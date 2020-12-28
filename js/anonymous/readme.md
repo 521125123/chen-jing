@@ -61,3 +61,5 @@
     8. 原型链    只要链上有，就可以调用 js_dontKnow.toString()
         Book.prototype.isPrototypeOf(js_dontKnow)//js_dontKonw是否能用Book上的原型链
         js_dontKnow.hasOwnProperty('dispaly')  判断js_dontKnow是否包含dispaly属性
+    9. Js class 关键字只是语法糖
+        const attrs = [...Object.getOwnPropertyNames(jsDontKonw)];
