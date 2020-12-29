@@ -1,4 +1,4 @@
-// miniprogram/pages/home/home.js
+// miniprogram/pages/goods/detail.js
 Page({
 
   /**
