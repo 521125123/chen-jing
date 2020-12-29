@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    goodsDetail: {},
+    goods:''
   },
 
 
@@ -13,13 +14,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log('onload');
+    this.data.goodsId = options.id
+    console.log(this.data.goodsId)
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
+    console.log('on ready');
 
   },
 
@@ -27,7 +31,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log('on show');
   },
 
   /**
