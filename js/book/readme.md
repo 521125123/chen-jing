@@ -35,4 +35,4 @@
         Point.prototype.toString
     ```
     1. JS 里本没有类， class只是语法糖，so console.log(typeof Point)返回的值是function，
-        class中的调用
+        class中语法并没有什么用，而是用function 
