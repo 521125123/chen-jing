@@ -1,5 +1,5 @@
 <!--pages/goods/list.wxml-->
-
+<!-- van 列表组件 -->
 <van-sticky>
   <view class="header">
     <view class="search">

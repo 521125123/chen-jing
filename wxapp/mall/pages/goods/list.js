@@ -9,7 +9,7 @@ Page({
   data: {
     goods:[],
     listType:1,
-    name: '', //搜索
+    name: '', //搜索keycode
     orderBy: '',//排序条件
     list:'list1'
   },
