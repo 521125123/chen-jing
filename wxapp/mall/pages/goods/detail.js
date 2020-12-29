@@ -1,4 +1,5 @@
 // pages/goods/detail.js
+const WXAPI = require('apifm-wxapi')
 Page({
 
   /**
@@ -6,25 +7,30 @@ Page({
    */
   data: {
     goodsDetail: {},
-    goods:''
+    goodsId:''
   },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('onload');
-    this.data.goodsId = options.id
+    // console.log('on load');
+    // this.data.goodsId = options.id
+    this.data.goodsId = 5781
     console.log(this.data.goodsId)
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+  async getGoodsDetailAndKanjieInfo(goodsId) {
+    // network /goods/:id
+    const goodsDetailRes = await WXAPI.goodsDetail(goodsId)
+    //为了调试有视屏的商品详情而做，以后要删除
+    // goodsDetailRes.data.basicInfo.videoId = '123'
+    // console.log(goodsDetailRes)
+    this.setData({
+      goodsDetail: goodsDetailRes.data
+    })
+  },
   onReady: function () {
     console.log('on ready');
-
   },
 
   /**
@@ -32,20 +38,22 @@ Page({
    */
   onShow: function () {
     console.log('on show');
+    // 晚一点去做数据请求 css + html 完成页面结构的绘制
+    this.getGoodsDetailAndKanjieInfo(this.data.goodsId)
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log('on hide')
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log('on unload');
   },
 
   /**
@@ -66,6 +74,16 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-
+    let _data = {
+      title: this.data.goodsDetail.basicInfo.name,
+      path: '/pages/goods/details?id=' + this.data.goodsDetail.basicInfo.id ,
+      success: function(res) {
+        // 转发成功
+      },
+      fail: function(res) {
+        // 转发失败
+      }
+    }
+    return _data
   }
 })

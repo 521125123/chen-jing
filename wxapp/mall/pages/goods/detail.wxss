@@ -1,1 +1,27 @@
-/* pages/goods/detail.wxss */
+
+page,view,image,input,textarea {
+  display: block;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #F2f2f2;
+  min-height: 100%;
+  padding-bottom: 100rpx;
+}
+.swiper-container{
+  width: 100%;
+  position: relative;  
+}
+.swiper_box {
+  width: 100%;
+  height:748rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+  height:748rpx;
+}
+
