@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex_container{
+            /* flex 让父元素具有强大的控制力 */
+            display: flex;
+        }
+        .main-box,.box{
+            height: 200px;
+            background-color: #112233;
+        }
+        .main-box{
+            /* width: calc(100% - 50px) */
+            flex:1;
+            width: 100%;
+        }
+        .box{
+            background-color: green;
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex_container">
+        <div class="main-box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
