@@ -28,6 +28,7 @@
               <label for="nameInput">姓名</label>
               <input type="text" class="form-control" name="nameInput" 
               id="nameInput" placeholder="请输入姓名" required>
+              <!-- required浏览器内置的检测 -->
             </div>
             <div class="form-group">
               <label for="hometownInput">家乡</label>
@@ -42,31 +43,35 @@
                 <input type="radio" name="sex" value="女"> 女
               </label>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default">添加</button>
           </form>    
     </div>
   </div>
   <script>
     
-  // const friends = [{
-  //   name: '黄伦',
-  //   hometown: '丰城',
-  //   sex: '男'
-  // }, {
-  //   name: '谢林威',
-  //   hometown: '赣州',
-  //   sex: '男'
-  // }, {
-  //   name: '王嘉新',
-  //   howetown: '景德镇',
-  //   sex: '女'
-  // }, {
-  //   name: '杨康妍',
-  //   howetown: '南昌',
-  //   sex: '女'
-  // }];
-  // window.localStorage.setItem('friends-info', JSON.stringify(friends))
+  const friends = [{
+    name: '黄伦',
+    hometown: '丰城',
+    sex: '男'
+  }, {
+    name: '谢林威',
+    hometown: '赣州',
+    sex: '男'
+  }, {
+    name: '王嘉新',
+    hometown: '景德镇',
+    sex: '女'
+  }, {
+    name: '杨康妍',
+    hometown: '南昌',
+    sex: '女'
+  }];
+  window.localStorage.setItem('friends-info', JSON.stringify(friends));
   window.onload = function() {
+   
+    //const friends = JSON.parse(localStorage.getItem('friends-info'));
+    const oUL = document.querySelector('#friends tbody')
+
     document
         .forms['friendForm']
         .addEventListener('submit',(event) => {
@@ -75,22 +80,27 @@
             const hometown =document.forms['friendForm']['hometownInput'].value;
             const sex =document.forms['friendForm']['sex'].value;
             console.log(name,hometown,sex);
+            let o = {name,hometown,sex};
+            friends.push({name,hometown,sex})
+            localStorage.setItem('friends-info',JSON.stringify(friends))
+            oUL.innerHTML += renderFriend(o, friends.length+1)
         })
+        function renderFriend(o,i){
+      return`<tr>
+          <th>${i}</th>
+          <td>${o.name}</td>
+          <td>${o.hometown}</td>
+          <td>${o.sex}</td>
+        </tr>`;
+    }
     const friends = JSON.parse(localStorage.getItem('friends-info'));
     console.log(typeof friends);
-    const oUL = document.querySelector('#friends tbody')
+   
     let i = 0;
     for (let friend  of friends) {
       // es6字符串模板符号
       i++
-      oUL.innerHTML += `
-        <tr>
-          <th>${i}</th>
-          <td>${friend.name}</td>
-          <td>${friend.hometown}</td>
-          <td>${friend.sex}</td>
-        </tr>
-      `
+      oUL.innerHTML += renderFriend(friend, i)
     }
   }
   </script>
