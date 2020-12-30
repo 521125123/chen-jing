@@ -1,0 +1,11 @@
+<!--pages/goods/list.wxml-->
+<!-- van 列表组件 -->
+<van-sticky>
+  <view class="header">
+    <view class="search">
+      <input type="text" placeholder="输入搜索关键词" value="{{name}}" bindinput="bindinput" bindconfirm="bindconfirm"></input>
+      <image src="/images/icon/search.svg" bindtap="search"></image>
+    </view>
+    <image class="show-type" src="/images/icon/list{{listType}}.svg" bindtap="changeShowType"></image>
+  </view>
+</van-sticky>
