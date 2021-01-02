@@ -1,0 +1,4 @@
+<view class='trends page'>
+    <!-- 组件 -->
+    <trend repo='{{item}}' wx:for="{{trends}}" wx:key="{{index}}"></trend>
+</view>

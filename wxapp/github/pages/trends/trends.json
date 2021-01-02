@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "trend":"../../components/trend-item/trend-item"
+  }
+}

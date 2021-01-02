@@ -1,13 +1,21 @@
 {
-  "pages":[
+  "pages": [
+    "pages/trends/trends",
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/news/news",
+    "pages/issues/issues",
+    
+    "pages/me/me",
+    "pages/pulls/pulls"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+  "window": {
+    "backgroundColor": "#24292e",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#24292e",
+    "navigationBarTitleText": "Mini GitHub",
+    "navigationBarTextStyle": "white",
+    "onReachBottomDistance": 100
   },
   "tabBar": {
     "color": "#eee",
