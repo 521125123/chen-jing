@@ -1,0 +1,15 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "- github 小程序\r     小程序组件语法\r     component\r     1. vant 框架开发\r     2. apifm 后台API\r     3. 两手空空时(怎么做程序)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vant/weapp": "^1.6.4"
+  }
+}

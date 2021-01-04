@@ -1,12 +1,11 @@
 {
   "pages": [
+    "pages/me/me",
     "pages/trends/trends",
     "pages/index/index",
     "pages/logs/logs",
     "pages/news/news",
     "pages/issues/issues",
-    
-    "pages/me/me",
     "pages/pulls/pulls"
   ],
   "window": {
