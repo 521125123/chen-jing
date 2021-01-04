@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    /* chrome safari webkit内核 
+    按下的高亮颜色
+    为了所有的浏览器按上去的感觉都统一
+    */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+a:-webkit-any-link {
+    /* 任何超链接 */
+    cursor: pointer;
+}
+.link {
+    /* 通用业务 */
+    color: rgba(255,255, 255, 0.8);
+}
+/* 移动端一屏的容器 */
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* background-color: green; */
+    overflow: hidden;
+    color: rgb(255,255,255,0.5);
+}
+.page, body{
+    background-color: rgb(17,17,17);
+}
+.page {
+    /* height: 200vh;
+    background-color: red; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* 只允许一个方向可以滚动 */
+    overflow-y: auto;
+    /* 可以让我们的滚动如丝般顺滑动 
+    -webkit-overflow-scrolling: touch
+    -webkit 内核实验阶段 chrome前缀
+    -moz-  火狐
+    -ms- 微软
+    移动端所有的设备只有webkit内核的，其他很少*/
+    -webkit-overflow-scrolling: touch;
+}
+.page__hd {
+    padding: 40px;
+}
+.page__title {
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+
+}
+.page.home .page__title {
+    font-size: 0;
+    margin-bottom: 15px;
+}
+.page__desc {
+    margin-top: 4px;
+    color: rgb(255, 255, 255,0.5);
+    text-align: left;
+    font-size: 14px;
+}
+.page__ft{
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.page__ft.j_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
