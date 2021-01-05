@@ -48,4 +48,5 @@
          git pull origin main（拉代码）
          git checkout main
          git branch
+         
          建文件.gitignore
