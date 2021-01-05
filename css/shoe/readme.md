@@ -21,10 +21,23 @@
             容器 宽度 + margin auto
             定位
             弹性布局 水平居中
-3. 配置文件
+3. 配置文件 -stylus
     npm i -g stylus
     stylus -w card.styl -o card.css
-
+    watch 监听
+    output 向外缩进
+    1. 用tab 缩进
+    2. 嵌套的css
+    .dw_card
+        &:hover
+        &:after
+        .dw_card__imgBox
+    .dw_card .dw_card__imgBox{
+    }
+    & 不是下级, 是引用上级
+## 课后小结
+- 
+   1. transform: translateY(-50%); 让div 沿Y轴平移自身高度的一半
 
 
    
