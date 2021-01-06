@@ -1,0 +1,6 @@
+<view class="container">
+  <view bindtap="switchList" class="list"></view>
+  <block wx:if="{{!isList}}">
+    <image src="https://7a68-zhh-cloud-b7a1a9-1257892988.tcb.qcloud.la/列表.svg?sign=b2bb8634bff3d0901db99aea167a73dd&t=1540886041"></image>
+  </block>
+</view>
