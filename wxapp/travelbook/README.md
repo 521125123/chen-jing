@@ -30,3 +30,8 @@
     (图片不能放在根目录image),图片放在腾讯服务器
     链接的方式呢？  服务器,
     云开发来解决, 存储
+- 使用header footer 代替div标签,语义化标签
+    html 语义化更好, 对百度的蜘蛛会更有好, 有利于SEO搜索引擎优化
+    flex + flex-direcrion:column flex:1 主体内容
+    弹性的意思无所谓具体多大, 我会分好。
+    overflow + overflow-scrolling:touch
