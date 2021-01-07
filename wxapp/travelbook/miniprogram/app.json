@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/editAccount/editAccount",
+    "pages/index/index",
+   
     "pages/accountBooks/accountBooks"
     
   ],

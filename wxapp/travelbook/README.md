@@ -59,3 +59,13 @@
     this.setData ({
       account:account
     })
+
+- 小程序开发指令
+    wx:if
+    wx:for images
+    wx:key 优化 index
+    数组要修改的时候
+    a=1  a=2
+    [item]不需要把整个数组都改变, 用太多内存 MVVM
+    wx:key="index" 给每一行都分配一个id key 一定要用
+    index 不是最佳
