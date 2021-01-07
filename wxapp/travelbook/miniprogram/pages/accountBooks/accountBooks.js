@@ -10,6 +10,11 @@ Page({
     curTime:null,      //当前的时间
     curYear:null,     //当前年份
   },
+  createNewAccount(){
+    wx.navigateTo({
+      url: '../editAccount/editAccount'
+    })
+  },
   switchList(){
     let isList = !this.data.isList
     this.setData({

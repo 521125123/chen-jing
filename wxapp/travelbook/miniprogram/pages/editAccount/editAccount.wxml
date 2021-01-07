@@ -1,0 +1,3 @@
+<view class="container">
+  <input type="text" class="accuntName" placeholder="旅行账本名称" bindinput="getInput" value="{{account.value}}" />
+</view>

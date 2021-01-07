@@ -32,6 +32,30 @@
     云开发来解决, 存储
 - 使用header footer 代替div标签,语义化标签
     html 语义化更好, 对百度的蜘蛛会更有好, 有利于SEO搜索引擎优化
-    flex + flex-direcrion:column flex:1 主体内容
+    1. display:flex + flex-direcrion:column(写在父元素中,flex对子元素进行弹性)   
+    flex:1 主体内容放在main中间
+    假如 flex:2 放在header 或 footer中 ,则header和footer分得占整个页面的2份
+    <body>
+    <!-- 语意化html5标签-->
+    <header class="header"></header>
+    <main> </main>
+    <footer class="footer"></footer>
+    </body>
     弹性的意思无所谓具体多大, 我会分好。
-    overflow + overflow-scrolling:touch
+    overflow-x: hidden; 在水平轴上进行隐藏
+    overflow-y: auto;在纵轴上隐藏,但会出现滚动条
+    overflow + overflow-scrolling:touch;
+
+- vant 框架 解决了开发中常见的问题
+    1. 页面布局 row + col
+    2. 常用组件
+        pannel button 60%的都不用写, 有框架
+- MVVM 思想
+    js data 里的数据叫model
+    wxml 叫view
+    VM 就叫做{{}} 视图模型层
+    let account = this.data.account;
+    account.value = e.detail.value;
+    this.setData ({
+      account:account
+    })

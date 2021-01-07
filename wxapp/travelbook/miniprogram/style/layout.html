@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局方案</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .row div {
+            height: 300px;
+            border: 1px dashed #123;
+        }
+        .row .col-md-6 {
+            margin-top: 20px;
+            background-color: #dfdfdf;
+        }
+        .row .col-md-6:last-child {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">A</div>
+            <div class="col-md-10">B
+                <div class="row">
+                    <div class="col-md-6">C</div>
+                    <div class="col-md-6">D</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

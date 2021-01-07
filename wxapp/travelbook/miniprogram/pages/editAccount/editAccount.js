@@ -1,0 +1,77 @@
+// miniprogram/pages/editAccount/editAccount.js
+Page({
+
+  /**
+   * 页面的初始数据   MVVM
+   */
+  data: {
+    account: {
+      value:'江财一日旅游'
+    }
+  },
+  getInput(e){
+    // MVVM 页面是数据驱动了
+    // 负责数据和界面的一致
+    console.log(e);
+    let account = this.data.account;
+    account.value = e.detail.value;
+    this.setData ({
+      account:account
+    })
+  },
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  onLoad: function (options) {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+
+  },
+
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+
+  }
+})
