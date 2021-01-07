@@ -3,4 +3,9 @@
   <block wx:if="{{!isList}}">
     <image src="https://7a68-zhh-cloud-b7a1a9-1257892988.tcb.qcloud.la/列表.svg?sign=b2bb8634bff3d0901db99aea167a73dd&t=1540886041"></image>
   </block>
+  <view class="newAccount" bindtap="createNewAccount">
+          <view class="desc">旅行中的每一笔开支都有独特的意义！</view>
+          <image src="https://7a68-zhh-cloud-b7a1a9-1257892988.tcb.qcloud.la/add.png?sign=33d0e543f8f4f30dcc64d010afa99bda&t=1540813605"></image>
+          <view class="title">创建一个新账本</view>
+        </view>
 </view>

@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/accountBooks/accountBooks"
+    "pages/accountBooks/accountBooks",
+    "pages/index/index"
+    
   ],
   "window": {
     "backgroundColor": "#3A3A3A",

@@ -14,3 +14,40 @@
     height: 60rpx;
     width: 60rpx;
   }
+  .newAccount {
+    margin: 20% auto 10%;
+    height: 80%;
+    width: 90%;
+    border-radius: 20rpx;
+  }
+  
+  .newAccount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px dashed #acabab;
+  }
+  
+  .newAccount:active {
+    border: 1px dashed red;
+  }
+  
+  .newAccount > .desc {
+    width: 70%;
+    margin: 25% auto;
+    color: #838383;
+    line-height: 60rpx;
+    text-align: center;
+  }
+  
+  .newAccount > image {
+    height: 90rpx;
+    width: 90rpx;
+  }
+  
+  .newAccount > .title {
+    color: #D3D3D3;
+    font-size: 40rpx;
+    margin-top: 40rpx;
+  }
+  
