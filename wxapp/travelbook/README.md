@@ -44,7 +44,7 @@
     弹性的意思无所谓具体多大, 我会分好。
     overflow-x: hidden; 在水平轴上进行隐藏
     overflow-y: auto;在纵轴上隐藏,但会出现滚动条
-    overflow + overflow-scrolling:touch;
+    overflow + overflow-scrolling:touch;滚动条滑动顺滑
 
 - vant 框架 解决了开发中常见的问题
     1. 页面布局 row + col
