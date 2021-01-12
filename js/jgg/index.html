@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css最新的布局方案Grid Flex的兄弟</title>
-    <link rel="stylesheet" href="./grid.css">
+    <!-- <link rel="stylesheet" href="./grid.css"> -->
     <style>
         .containter {
             height: 100vh;
@@ -14,7 +14,7 @@
              grid-template-columns: 100px 100px 100px;
              grid-template-rows: 100px 100px 100px;
         }
-        /* .box {
+        .box {
             background-color: green;
         }
         .box:nth-child(odd) {
@@ -31,7 +31,7 @@
         .box:nth-child(6){background-color: gray;}
         .box:nth-child(7){background-color: pink;}
         .box:nth-child(8){background-color: lightsteelblue;}
-        .box:nth-child(9){background-color: orange;} */
+        .box:nth-child(9){background-color: orange;}
     </style>
 </head>
 <body>
@@ -47,17 +47,18 @@
         <div class="box">8</div>
         <div class="box">9</div>
     </div>
-    <!-- <script> -->
-        // const boxes = document.querySelectorAll('.box');
-        // let i = 1;
-        // for (let box of boxes) {
+    <script>
+        const boxes = document.querySelectorAll('.box');
+        console.log(boxes);
+        let i = 1;
+        for (let box of boxes) {
             // 在JS 里可以操作一切的CSS , 是王者 
             // html document.createElment 
             // CSS  ele.style
             // 驼峰式命名
-    //         i++;
-    //         box.style.backgroundColor = `rgba(${i * 20}, ${i * 10}, ${i * 5})`
-    //     }
-    <!--  </script> -->
+            i++;
+            box.style.backgroundColor = `rgba(${i * 20}, ${i * 10}, ${i * 5})`
+        }
+    </script>
 </body>
 </html>
