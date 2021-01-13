@@ -1,0 +1,4 @@
+<!--index.wxml-->
+<view class="container">
+  <text>陈sir的实战学习</text>
+</view>
