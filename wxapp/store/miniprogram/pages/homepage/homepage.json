@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "商城",
+  "navigationBarTitleText": "廖师傅的水果店",
   "usingComponents": {
     "my-search": "/components/search/search",
     "index-swiper": "/components/swiper/swiper"
