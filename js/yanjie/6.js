@@ -1,5 +1,7 @@
 function duplicateCount(text) {
     var str = text.toLowerCase().split('').sort().join('');
+    console.log(str);
+    
    
     //请得到所有的数字
     // var word = '123-4560-666';
@@ -14,6 +16,7 @@ function duplicateCount(text) {
     // console.log(arr);
     // console.log(str);
     // var arr = str
+    console.log(arr);
     return arr.length;
 }
 console.log(duplicateCount('aadsdjfwuhh'));
