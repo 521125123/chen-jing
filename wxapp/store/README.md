@@ -19,3 +19,9 @@ isShow true  false 没准备好。
     2. 多个type 放到数据里
     - css flex  1/4
     位置怎莫做
+7. 数据库设计
+    - fruit-board
+    支持where 操作  0 1 2 3
+    onShow 是否上架
+    详情页 swiper
+- flex 里怎么让元素下去

@@ -1,13 +1,15 @@
 // miniprogram/pages/homepage/homepage.js
+const app = getApp(); //全局方法， app.js 定义的全局方法
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    fruitInfo: ,
+    fruitInfo: [],
     offline: false, // 打烊
-    isShow: true,
+    isShow: false,
     imgUrls: [
       'https://m.360buyimg.com/mobilecms/s843x843_jfs/t1/152869/36/733/129848/5f6da644E8c640b50/35117f17f08456ad.jpg!q70.dpg.webp',
       'https://m.360buyimg.com/mobilecms/s843x843_jfs/t1/149571/38/9289/117895/5f6da644E784f911b/21a284afecffdb4f.jpg!q70.dpg.webp'
@@ -38,23 +40,41 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+     // wxml wxss
+     wx.showLoading({
+      title:'正在加载中...',
+    }) 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-//js与页面进行交互
+    // ready 在show 后面？ js 跟页面交互了 
+    // 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-//html 与  css  做数据请求 到云端请求数据 比较早, 放到ready晚了 花时间，  尽量提早
-// onLoad 正在加载 加载且计算渲染页面,线程如果又再启动下载进程的话,可能会比较卡到
-//fruit-bored
+    // 数据请求 云端请求数据 比较早， 放
+// 到ready 晚了, 花时间， 尽量提前, 
+// onLoad 正在加载  加载且计算渲染页面， 线程
+// 如果又再启动下载进程的话 可能就会卡到
+    // 封装所有的请求为一个方法
+    // app  当前应用
+    app.getInfoByOrder('fruit-board', 'time', 'desc', e => {
+      this.setData({
+        fruitInfo: e.data,
+        isShow:true
+      })
+      wx.hideLoading(); 
+    })
+  },
+  tapToDetail(e) {
+    const _id = e.currentTarget.dataset.fID;
+    
   },
 
   /**
