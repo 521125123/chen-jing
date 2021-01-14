@@ -1,2 +1,11 @@
-<!--miniprogram/pages/homepage/homepage.wxml-->
-<text>miniprogram/pages/homepage/homepage.wxml</text>
+<view class="offline" wx:if="{{offline}}">
+    打烊了!
+</view>
+<view class="myHomePage" wx:if="{{isShow&&!offline}}">
+    <!-- 搜索框 -->
+    <my-search></my-search>
+    <!-- 轮播图 -->
+    <view class="swiper-container">
+        <index-swiper imgUrls="{{imgUrls}}"></index-swiper>
+    </view>
+</view>

@@ -5,8 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    offline: false, // 打烊
+    isShow: true,
+    imgUrls: [
+      'https://m.360buyimg.com/mobilecms/s843x843_jfs/t1/152869/36/733/129848/5f6da644E8c640b50/35117f17f08456ad.jpg!q70.dpg.webp',
+      'https://m.360buyimg.com/mobilecms/s843x843_jfs/t1/149571/38/9289/117895/5f6da644E784f911b/21a284afecffdb4f.jpg!q70.dpg.webp'
+    ]
   },
+
 
   /**
    * 生命周期函数--监听页面加载
