@@ -3,7 +3,7 @@
 水果电商小程序
 shop(店)   <-  水果
 10：06  kfc  打烊
-1. 首页设置营业/打烊的需要？
+ 
 2. 页面功能, 搜索、swiper、列表。
 组件化思想
 3. isShow？
@@ -25,3 +25,11 @@ isShow true  false 没准备好。
     onShow 是否上架
     详情页 swiper
 - flex 里怎么让元素下去
+- 设计一下购物车?  数组某项商品,  数量
+   购物车功能: 首页, 要加入购物车 加入  改数量
+   购物车  展示出来  加入购物车
+   详情页, 加入购物
+   关于购物车的数据，是不是要超出页面化，来到?
+   比页面级别更大的是谁?
+   view|image  标签  -> component -> page ->application
+   globalData  promise  是否有重复的判断

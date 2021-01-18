@@ -1,2 +1,8 @@
 
 <text>search</text>
+ <!-- <view class="search">
+    <input type="text" placeholder="输入搜索关键字" value="{{keyword}}"
+    bindinput="doSearchInput"
+    bindconfirm="doSearch"/>
+    <image src="/images/icon/search-pic.png" bindtap="doSearch"/>
+  </view> -->

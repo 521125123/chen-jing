@@ -2,7 +2,8 @@
   "pages": [
     "pages/homepage/homepage",
     "pages/cart/cart",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundColor": "#F0F0F0",

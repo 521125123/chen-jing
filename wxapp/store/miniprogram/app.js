@@ -13,8 +13,10 @@ App({
         traceUser: true,
       })
     }
-
-    this.globalData = {}
+    /*全局数据 */
+    this.globalData = {
+      carts:[]
+    }
   },
   //全局的列表查询方法 ，全局共享
   //setName  表名
@@ -27,5 +29,40 @@ App({
     .get() // promise 
     .then(callback) // 回到页面去  
     .catch(console.error) // 容错处理
+  },
+  getInfoWhere(setName,ruleObj,callback){
+    const db = wx.cloud.database();
+    db
+      .collection(setName)
+      .where(ruleObj) // 条件
+      .get({
+        success: callback,
+        fail: console.err
+      })
+  },
+  // 在购物车是否出现过
+  isNotRepeteToCart(newCartItem) {
+    const isRepete = () => {
+      const p = new Promise((resolve, reject) => {
+        let flag = false
+        this.globalData.carts.forEach(v => {
+          if(v._id == newCartItem._id) {
+            flag = true
+          }
+        })
+        resolve(flag)
+      })  
+      return p;
+    }
+    isRepete()
+      .then(flag => {
+        if (flag) {
+          wx.showToast({
+            title: '已经添加过了',
+          })
+        } else {
+          this.globalData.carts.push(newCartItem)
+        }
+      })
   }
 })
