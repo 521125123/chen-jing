@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./1.js"></script>
+</head>
+<body>
+    <script>
+        //对象 this, 内存挂钩 指针
+        var a = 1; //内存， 在内存中开辟空间 number a 1
+        // 
+        var obj = { // 在内存中开辟空间比较大了 ->
+            // map空间 字典查
+            foo:5,
+            // 特别处理了。
+            // 内存，把我们的代码，I/O 通过文件系统读取到
+            //内存,内存中有一个地址，执行cpu
+            //func()函数之中，重新分配一个执行空间，进入执行栈
+            //创建一个作用域scope 变量的查找链 this
+            func: function () {
+                console.log(this.foo);
+            }
+        }
+        var foo = 6;
+        var func = obj.func;
+        obj.func()  // 从.运算 对象属性查找-》 对地址的不断查找
+        func();
+    </script>
+</body>
+</html>
