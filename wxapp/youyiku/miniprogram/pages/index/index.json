@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "my-search": "/components/search/search"
+  }
+}

@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="YCindex">
+  <!-- 搜索框 -->
+  <my-search></my-search>
+  <!-- 新类.活动   商城 -->
+  <view class="YCtype-container">
+    新类.活动   商城
+  </view>
+  <!-- 轮播图 -->
+  <view class="YCswiper-container">
+    <index-swiper imgUrls="{{imgUrls}}"></index-swiper>
+  </view>
+   <!-- 三张特别活动宣告片 -->
+  <view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+  <!-- 商品分类 -->
+  <view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+  <!-- 人气推荐 一件商品一行共六行-->
+  <view>
+
+  </view>
+  <!-- 人气推荐 两件商品一行-->
+</view>

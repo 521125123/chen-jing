@@ -1,0 +1,7 @@
+<!--components/search/search.wxml-->
+<view class="search">
+    <image src="/images/icon/search.svg" bindtap="doSearch"/>
+    <input type="text" placeholder="输入搜索关键字" value="{{keyword}}"
+    bindinput="doSearchInput"
+    bindconfirm="doSearch"/>
+  </view>
