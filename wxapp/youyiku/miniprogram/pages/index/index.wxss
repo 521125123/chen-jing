@@ -1,1 +1,75 @@
 /**index.wxss**/
+.YCfilters {
+  width: 100vw;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+}
+.YCfilters .item {
+  text-align: center;
+  line-height: 88rpx;
+  width: 50vw;
+}
+.YCfilters .active {
+  color:#fa1e26;
+  border-bottom: 10rpx solid red;
+}
+.activity {
+  width: 100vw;
+  height: 150rpx;
+  padding-top: 20rpx;
+  margin-bottom: 80rpx;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+.activity view {
+  width: 30%;
+  height: 150rpx;
+  background-color: #fa1e26;
+  border-radius: 10rpx 10rpx 10rpx 10rpx;
+}
+.activity view .line1 {
+  font-size: 14px;
+}
+.activity .Redbag {
+  width:60rpx;
+  height:70rpx;
+  position: relative;
+  top:-120rpx;
+  left:130rpx;
+}
+.activity .number {
+  font-size: 35px;
+}
+.activity view .small {
+  font-size: 10px;
+}
+.activity view .line2 {
+  font-size: 18px;
+}
+.todoList {
+  width: 100vw;
+}
+.todoList .text {
+
+  height: 100rpx;
+  background-color: #9c899c;
+  font-size: 20px;
+  line-height: 100rpx;
+}
+.todoList .list {
+  height: 200rpx;
+  background-color: pink;
+  display: flex;
+  justify-content: space-around;
+}
+.todoList .list view{
+  height: 100%;
+  width: 31%;
+  text-align: center;
+}
+.todoList .list view image{
+  height: 150rpx;
+  width: 230rpx;
+}

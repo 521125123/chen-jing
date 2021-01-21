@@ -7,7 +7,23 @@ Page({
    * 页面的初始数据
    */
   data: {
+    orderBy:"Newactivity",
+    imgUrls:[
+      "https://img.alicdn.com/imgextra/https://img.alicdn.com/imgextra/i1/383602586/O1CN01Eliwby1UyQsjuo3GQ-383602586.jpg_430x430q90.jpg",
+      "https://img.alicdn.com/imgextra/i2/669642169/O1CN01SK9cE11RtRismmE4l-669642169.jpg_430x430q90.jpg",
+      "https://img.alicdn.com/imgextra/i1/2194810725/O1CN017y1fs61HE5eOJOmsK_!!0-item_pic.jpg_430x430q90.jpg"
+    ]
   },
+  filter(e){
+    this.setData({
+      orderBy: e.currentTarget.dataset.val
+    })
+  },
+
+
+
+
+
   /**
    * 生命周期函数--监听页面加载
    */

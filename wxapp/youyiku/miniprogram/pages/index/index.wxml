@@ -1,31 +1,61 @@
 <!--index.wxml-->
-<view class="YCindex">
+<van-sticky>
   <!-- 搜索框 -->
   <my-search></my-search>
   <!-- 新类.活动   商城 -->
-  <view class="YCtype-container">
-    新类.活动   商城
+  <view class="YCfilters">
+    <view class="item {{orderBy=='Newactivity'?'active':''}}" data-val="Newactivity" bindtap="filter">新类.活动</view> 
+    <view class="item {{orderBy=='Mall'?'active':''}}" data-val="Mall" bindtap="filter">商城</view>  
   </view>
+</van-sticky>
+<view wx:if="{{orderBy=='Newactivity'?true:false}}">
   <!-- 轮播图 -->
   <view class="YCswiper-container">
     <index-swiper imgUrls="{{imgUrls}}"></index-swiper>
   </view>
    <!-- 三张特别活动宣告片 -->
-  <view>
-    <view></view>
-    <view></view>
-    <view></view>
+  <view class="activity">
+    <view>
+      <text class="line1">解锁66元\n新意红包</text>
+      <text class="small">\n活动时间:1.15-1.24</text>
+      <image class="Redbag" src="https://6368-chenmujing-2gvu8h64e76e21a4-1304585122.tcb.qcloud.la/%E7%BA%A2%E5%8C%85.jpg?sign=01b89282db67c2fd834f473ae0a809fd&t=1611142529"></image>
+    </view>
+    <view>
+      <text class="line2">限时\n特惠￥</text>
+      <text class="number">59</text><text>起</text>
+    </view>
+    <view>
+      <text class="line2">超值\n精选￥</text>
+      <text class="number">39</text><text>起</text>
+    </view>
   </view>
   <!-- 商品分类 -->
-  <view>
-    <view></view>
-    <view></view>
-    <view></view>
-    <view></view>
+  <view class="todoList">
+    <view class="text">商品分类</view>
+    <view class="list">
+      <view>
+        <image src="https://6368-chenmujing-2gvu8h64e76e21a4-1304585122.tcb.qcloud.la/%E5%A9%B4%E5%84%BF%E8%A3%85.jpg?sign=32a4171e41a18293383d1e361a9d443c&t=1611137565" bindtap=""></image>
+        <text>婴儿装</text>
+      </view>
+      <view>
+        <image src="https://6368-chenmujing-2gvu8h64e76e21a4-1304585122.tcb.qcloud.la/%E7%94%B7%E5%A3%AB%E8%A3%85.jpg?sign=56bcfca55df5cb9b699f511919ff587d&t=1611137604" bindtap=""></image>
+        <text>男士装</text>
+      </view>
+      <view>
+        <image src="https://6368-chenmujing-2gvu8h64e76e21a4-1304585122.tcb.qcloud.la/%E5%A5%B3%E8%A3%851.jpg?sign=90609ce815a160226cbb2b1f05cb8f6f&t=1611137631" bindtap=""></image>
+        <text>女装</text>
+      </view>
+    </view>
   </view>
   <!-- 人气推荐 一件商品一行共六行-->
   <view>
-
+    
   </view>
   <!-- 人气推荐 两件商品一行-->
+</view>
+<view wx:if="{{orderBy=='Mall'?true:false}}">
+  <!-- 轮播图 -->
+  <view class="YCswiper-container">
+    <index-swiper imgUrls="{{imgUrls}}"></index-swiper>
+  </view>
 </view>
