@@ -32,3 +32,5 @@
             document.getElementById('')巨大的开销
             js(语言世界) -> html+css DOM 树世界
             别的语言没有
+.container>(.img>img.pic[alt="加载中"])*10
+3. 分屏分载html 制高点
