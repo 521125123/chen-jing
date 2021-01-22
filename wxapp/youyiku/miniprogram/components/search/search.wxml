@@ -3,5 +3,7 @@
     <view class="search">
       <image class="show-type1" src="/images/search.svg" bindtap="search"></image>
       <input type="text" value="{{name}}" bindinput="bindinput" bindconfirm="bindconfirm"></input>
+      <image class="show-type2" src="/images/love.svg" bindtap="love"></image>
+      <image class="show-type3" src="/images/QR-code.svg" bindtap="code"></image>
     </view>
 </view>

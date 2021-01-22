@@ -21,15 +21,22 @@ page,view,image,input {
   height: 100%;
 }
 .header .search image {
-  width: 35rpx;
-  height: 35rpx;
   position: absolute;
   top:16rpx;
-  left: 20rpx;
   z-index: 999;
 }
-.header show-type1 {
+.header .search .show-type1 {
   width: 40rpx;
   height: 40rpx;
-  margin-left: 20rpx;
+  left: 20rpx;
+}
+.header .search .show-type2 {
+  width: 50rpx;
+  height: 50rpx;
+  right: 150rpx;
+}
+.header .search .show-type3 {
+  width: 50rpx;
+  height: 50rpx;
+  right: 50rpx;
 }
