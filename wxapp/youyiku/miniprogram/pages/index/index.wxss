@@ -4,6 +4,7 @@
   height: 88rpx;
   background: #fff;
   display: flex;
+  
 }
 .YCfilters .item {
   text-align: center;
@@ -18,18 +19,20 @@
   width: 100vw;
   height: 150rpx;
   padding-top: 20rpx;
-  margin-bottom: 80rpx;
+  margin-bottom: 200rpx;
   color: #fff;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
-.activity view {
-  width: 30%;
+.activity .disconunt,.newset {
+  width: 32%;
   height: 150rpx;
-  background-color: #fa1e26;
+  background-color: #e76262;
   border-radius: 10rpx 10rpx 10rpx 10rpx;
+  margin-bottom: 20rpx;
 }
-.activity view .line1 {
+.activity .disconunt .line1 {
   font-size: 14px;
 }
 .activity .Redbag {
@@ -42,20 +45,50 @@
 .activity .number {
   font-size: 35px;
 }
-.activity view .small {
+.activity .disconunt .small {
   font-size: 10px;
 }
-.activity view .line2 {
+.activity .disconunt .line2 {
   font-size: 18px;
+}
+.activity .newset {
+  background-color: #fff;
+  color: black;
+  text-align: end;
+  padding-top: 15rpx;
+}
+.activity .newset .english{
+  font-size: 26rpx;
+}
+.activity .newset .line-one{
+  font-weight: bolder; 
+  letter-spacing: 10rpx;
+}
+.activity .newset .line-two{
+  font-weight: bolder;
+  font-size: 25rpx; 
+  letter-spacing: 3rpx;
+}
+.activity .newset .small-one{
+  font-size: 25rpx;
+  letter-spacing: 6rpx;
+}
+.activity .newset .img-one {
+  width:60rpx;
+  height:70rpx;
+  position: relative;
+  top:-10rpx;
+  left:160rpx;
 }
 .todoList {
   width: 100vw;
+  margin-bottom: 100rpx;
 }
-.todoList .text {
-
+.text {
   height: 100rpx;
-  background-color: #9c899c;
+  background-color: #ece8ec;
   font-size: 20px;
+  font-weight: bold;
   line-height: 100rpx;
 }
 .todoList .list {
@@ -72,4 +105,184 @@
 .todoList .list view image{
   height: 150rpx;
   width: 230rpx;
+}
+
+.clothes-container {
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 710rpx;
+  margin:20rpx;
+  border-radius: 10rpx 10rpx 0 0;
+  position:relative;
+  top: -73rpx;
+}
+.clothes-item {
+  width: 710rpx;
+  display: flex;
+  justify-self: start;
+  align-items: center;
+  
+  overflow: hidden;
+  border-radius: 15rpx;
+  margin-bottom:20rpx;
+  background-color:white;
+  box-shadow: 3.5rpx 3.5rpx 1rpx #d3d1d1;
+}
+.clothes-item .clothes-image {
+  flex: 1;
+  height: 320rpx;
+  width: 710rpx; 
+  border: 1rpx;
+}
+.clothes-item .clothes-image image {
+  width: 100%;
+  height:100%;
+}
+.clothes-item .clothes-info {
+  flex: 1;
+  margin: 15rpx 0 10rpx 10rpx;
+  padding-left: 20rpx;
+}
+.clothes-item .clothes-info .line1 {
+  margin-bottom: 10rpx;
+}
+.clothes-item .clothes-info .name {
+  color: green;
+  font-size:35rpx;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clothes-item .clothes-info .line2 {
+  
+  color: black;
+  display: flex;
+}
+.clothes-item .clothes-info .line2 .price {
+  flex: 1;
+  font-size:20rpx;
+
+}
+.clothes-item .clothes-info .line2 .Iprice {
+  font-size: 30rpx;
+  color: #fa1e26;
+}
+.clothes-item .clothes-info .line2 .lastTime {
+  font-size: 20rpx;
+  flex: 1;
+  flex-wrap: nowrap;
+}
+.clothes-item .clothes-info .line2 .lastdata{
+  font-size: 15rpx;
+}
+.clothes-item .clothes-info .line2 .depreciate {
+  flex: 1;
+  font-size: 20rpx;
+}
+.divLine {
+  background: #E0E3DA;
+  width: 100vw;
+  height: 20rpx;
+}
+.LifeWare {
+  display: flex;
+  width: 100vw;
+  height: 150rpx;
+}
+.LifeWare .Life1 {
+  margin-top: 20rpx;
+  width: 600rpx;
+  height: 100rpx;
+  font-size: 45rpx;
+  font-weight: bold;
+}
+.LifeWare .Life2 {
+  margin-top: 10rpx;
+  padding-left: 20rpx;
+  margin-right: 40rpx;
+  font-size: 30rpx;
+  flex: 1;
+  width: 100rpx;
+  height: 100rpx;
+  color: #d3d1d1;
+  font-weight: bold;
+  background-color: red;
+}
+.LifeWare .Lifesmall {
+  width: 100rpx;
+  height: 20rpx;
+  font-size: 20rpx;
+  padding-top: 5rpx;
+  background-color: white;
+  position: relative;
+  top: -15rpx;
+  z-index: 999;
+}
+.lifetext {
+  font-size: 25rpx;
+}
+.sortContainer{
+  display: grid;
+  margin-top: 15rpx;
+  grid-template-columns:repeat(auto-fill,185rpx);/** 平铺宽度为185rpx的单元格 */
+  grid-template-rows: 150rpx;/** 设置高度为150rpx */
+  grid-auto-rows: 150rpx;/** 当容易高度不够时，多余的组件高度将怎么分配，默认的高度由单元格内容决定 */
+  justify-content: start;/** 水平居中  */
+  background-color: #e5e4e9;
+  grid-gap: 1rpx;/** 水平和垂直间距为10rpx*/
+}
+.sortContainer1 {
+  display: grid;
+  margin-top: 15rpx;
+  grid-template-columns:repeat(auto-fill,370rpx);/** 平铺宽度为100px的单元格 */
+  grid-template-rows: 150rpx;/** 设置高度为100px */
+  grid-auto-rows: 150rpx;/** 当容易高度不够时，多余的组件高度将怎么分配，默认的高度由单元格内容决定 */
+  justify-content: start;/** 水平居中  */
+  background-color: #e5e4e9;
+  grid-gap: 1rpx;/** 水平和垂直间距为10rpx*/
+}
+.sort1,.sort2,.sort3{
+  font-size: 35rpx;
+  font-weight: bold;
+  border: 1px solid #e5e4e9;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+}
+.sort2 {
+  font-size: 30rpx;
+}
+.sort3 {
+  height: 150rpx;
+}
+.newYear {
+  height: 100rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  padding-left: 20rpx;
+  padding-top: 20rpx;
+}
+.newsort {
+  height: 250rpx;
+  display: flex;
+}
+.newsort .newimg {
+  width: 250rpx;
+}
+.newsort .newimg .img1 {
+  width: 250rpx;
+  height: 250rpx;
+}
+.newsort .newdes {
+  padding-top: 40rpx;
+  padding-left: 30rpx;
+  width: 500rpx;
+}
+.newsort .newdes .line1 {
+  font-weight: bold;
 }

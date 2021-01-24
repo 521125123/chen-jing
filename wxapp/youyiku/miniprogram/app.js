@@ -15,5 +15,14 @@ App({
     }
 
     this.globalData = {}
-  }
+  },
+  getInfoWhere(setName, callback) {
+    const db = wx.cloud.database();
+    db
+      .collection(setName)
+      .get({
+        success: callback,
+        fail: console.err
+      })
+  },
 })

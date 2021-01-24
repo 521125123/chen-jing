@@ -1,6 +1,8 @@
 {
   "usingComponents": {
     "my-search": "/components/search/search",
-    "index-swiper":"/components/swiper/swiper"
+    "index-swiper":"/components/swiper/swiper",
+    "mall-swiper1":"/components/Mall/mall",
+    "mall-swiper2":"/components/Mall/mswiper"
   }
 }

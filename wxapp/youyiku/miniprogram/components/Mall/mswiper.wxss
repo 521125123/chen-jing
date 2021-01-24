@@ -1,0 +1,46 @@
+/* components/Mall/mswiper.wxss */
+.mswiper_container {
+  width: 750rpx;
+  height: 800rpx;
+}
+.mswiper_container .mswiper_item {
+  background-color: green;
+  height: 750rpx;
+}
+.mswiper_container .img1 {
+  display: inline-block;
+  width: 750rpx;
+  height: 500rpx;
+}
+.mswiper_container .english {
+  display: flex;
+  height: 70rpx;
+  margin-bottom: 20rpx;
+}
+.mswiper_container .word1,.word2 {
+  background-color: black;
+  color: aliceblue;
+  font-size: 25rpx;
+  position: relative;
+  left: 320rpx;
+}
+.mswiper_container .word2 {
+  font-size: 50rpx;
+  margin-left: 20rpx;
+  width: 50rpx;
+  padding-left: 7rpx;
+}
+.divLine {
+  background: #E0E3DA;
+  width: 100vw;
+  height: 5rpx;
+}
+.mswiper_container .description {
+  height: 250rpx;
+}
+.mswiper_container .description .des1 {
+  font-weight: bold;
+}
+.mswiper_container .description .des2 {
+  font-size: 30rpx;
+}

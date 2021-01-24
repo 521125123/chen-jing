@@ -1,0 +1,20 @@
+/* components/Mall/mall.wxss */
+.swiper_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rpx;
+  width: 100vw;
+  color: white;
+}
+.swiper_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: red;
+  font-weight:400;
+}

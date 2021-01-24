@@ -1,0 +1,70 @@
+<!--components/Mall/mswiper.wxml-->
+
+<swiper class="mswiper_container"  autoplay="true" circular="true" interval="3000"
+indicator-dots="true">
+  <swiper-item>
+    <image src="{{imgsUrl[0]}}" class="img1"></image>
+    <view class="english">
+      <view class="word1">
+        <text>UNI\nQLQ</text>
+      </view>
+      <view class="word2">
+        <text>U</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+    <view class="description">
+      <text class="des1">Uniqlo U 2021春夏系列童装\n</text>
+      <text class="des2">掌上优衣库及指定门店 2021年2月26日开始贩售全新童装全系列商品</text>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <image src="{{imgsUrl[1]}}" class="img1"></image>
+    <view class="english">
+      <view class="word1">
+        <text>UNI\nQLQ</text>
+      </view>
+      <view class="word2">
+        <text>U</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+    <view class="description">
+      <text class="des1">Uniqlo U 2021春夏系列女装\n</text>
+      <text class="des2">新生机美学 穿出质感新生活</text>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <image src="{{imgsUrl[2]}}" class="img1"></image>
+    <view class="english">
+      <view class="word1">
+        <text>UNI\nQLQ</text>
+      </view>
+      <view class="word2">
+        <text>U</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+    <view class="description">
+      <text class="des1">Uniqlo U 2021春夏系列\n</text>
+      <text class="des2">生机色彩 质感面料 自在廓形</text>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <image src="{{imgsUrl[3]}}" class="img1"></image>
+    <view class="english">
+      <view class="word1">
+        <text>UNI\nQLQ</text>
+      </view>
+      <view class="word2">
+        <text>U</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+    <view class="description">
+      <text class="des1">Uniqlo U 2021春夏系列男装\n</text>
+      <text class="des2">国际设计团队 打造未来经典之服</text>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="divLine"></view>

@@ -1,0 +1,14 @@
+<!--components/Mall/mall.wxml-->
+<!-- 1.公告轮播 点数在图片下面 -->
+<swiper class="swiper_container"  autoplay="true" circular="true" interval="3000">
+  <swiper-item>
+    <view class="swiper_item">关于物流配送延迟等通知</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="swiper_item">再次提醒: 关于警惕不法分子冒充优衣库行骗的公告</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="swiper_item">关于部分门店暂不支持全渠道退货的通知</view>
+  </swiper-item>
+</swiper>
+

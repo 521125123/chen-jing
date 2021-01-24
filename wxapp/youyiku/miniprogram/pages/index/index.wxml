@@ -13,20 +13,38 @@
   <view class="YCswiper-container">
     <index-swiper imgUrls="{{imgUrls}}"></index-swiper>
   </view>
-   <!-- 三张特别活动宣告片 -->
+   <!-- 六张特别活动宣告片 -->
   <view class="activity">
-    <view>
+    <!-- 宣传活动 -->
+    <view class="disconunt">
       <text class="line1">解锁66元\n新意红包</text>
       <text class="small">\n活动时间:1.15-1.24</text>
       <image class="Redbag" src="https://6368-chenmujing-2gvu8h64e76e21a4-1304585122.tcb.qcloud.la/%E7%BA%A2%E5%8C%85.jpg?sign=01b89282db67c2fd834f473ae0a809fd&t=1611142529"></image>
     </view>
-    <view>
+    <view class="disconunt">
       <text class="line2">限时\n特惠￥</text>
       <text class="number">59</text><text>起</text>
     </view>
-    <view>
+    <view class="disconunt">
       <text class="line2">超值\n精选￥</text>
       <text class="number">39</text><text>起</text>
+    </view>
+    <!-- 新品上市 元气UT 春夏精选 -->
+    <view class="newset">
+      <text class="line-one">新品上市\n</text>
+      <text class="small-one">开启幸福新年</text>
+      <image class="img-one" src="../../images/shoping-car.svg"></image>
+    </view>
+    <view class="newset">
+      <text class="line-one">元气UT\n</text>
+      <text class="small-one">活力上新</text>
+      <image class="img-one" src="../../images/shoping-car.svg"></image>
+    </view>
+    <view class="newset">
+      <text class="english">Uniqle</text>
+      <text class="line-two"> U春夏系列\n</text>
+      <text class="small-one">立即购买</text>
+      <image class="img-one" src="../../images/shoping-car.svg"></image>
     </view>
   </view>
   <!-- 商品分类 -->
@@ -47,15 +65,103 @@
       </view>
     </view>
   </view>
-  <!-- 人气推荐 一件商品一行共六行-->
-  <view>
-    
+  
+  <!-- 人气推荐 一件商品一行共六行 最后一行三列-->
+  <view class="clothes-container">
+    <view class="text">人气推荐</view>
+    <block wx:for="{{clothesInfo}}" wx:key="clothesId">
+      <view class="clothes-item" bindtap="" data-cid="{{clothes._id}}">
+        <view class="clothes-image">
+          <image src="{{item.imgUrl}}" mode="aspectFill"/>
+        </view>
+        <view class="clothes-info">
+          <view class="line1">
+            <text class="name">{{item.name}}</text>
+            <text class="description">{{item.description}}</text>
+          </view>
+          <view class="line2">
+            <view class="lastTime">
+              <text>限时特优\n</text>
+              <text class="lastdata">{{item.lastLong}}</text>
+            </view>
+            <view class="price">
+              <text class="Iprice">{{item.price}}</text>
+              <text>起</text>
+            </view>
+            <view class="depreciate">
+              <text>最高降价</text>
+              <text>￥50</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
   </view>
   <!-- 人气推荐 两件商品一行-->
 </view>
 <view wx:if="{{orderBy=='Mall'?true:false}}">
   <!-- 轮播图 -->
-  <view class="YCswiper-container">
-    <index-swiper imgUrls="{{imgUrls}}"></index-swiper>
-  </view>
+  <mall-swiper1></mall-swiper1>
+  <!-- 2.图片轮播图 -->
+  <mall-swiper2></mall-swiper2>
+  <!-- 3.Life Ware服适人生 -->
+  <block>
+    <view class="LifeWare">
+      <view class="Life1">
+        <text>Life Ware服适人生,2021</text>
+      </view>
+      <view>
+        <view class="Life2">
+          <text>UNI\nQLQ</text>
+        </view>
+        <view class="Lifesmall">
+          <text>LifeWare</text>
+        </view>
+      </view>
+    </view>
+    <view class="lifetext">
+      <text>清新有致的浅灰色短裤与T恤，简洁舒适的中性装扮，让整体显得格外时髦,金属项链与之相融和，看上去青春而富有朝气。
+深色的五分仔裤搭配镂空的针织衫，分外迷人；出位的配饰，可以为这样简单的装扮增添时尚风味。</text>
+    </view>
+  </block>
+ 
+  <!-- 4.特辑一览 -->
+  <block>
+    <view class="sortContainer">
+      <view class="sort1">WOMEN</view>
+      <view class="sort1">MEN</view>
+      <view class="sort1">KIDS</view>
+      <view class="sort1">BABY</view>
+    </view>
+    <view class="sortContainer1">
+      <view class="sort2">热销TOP60</view>
+      <view class="sort2">母婴童精选</view>
+      <view class="sort2">新作商品</view>
+      <view class="sort2">限时特优</view>
+      <view class="sort2">特大/特效尺码</view>
+      <view class="sort2">
+        <text>旗舰店\n特别企划商品</text>
+      </view>
+    </view>
+    <view class="sort3">
+      特辑一览
+    </view>
+    
+  </block>
+  <view class="divLine"></view>
+  <!-- 5.类别展示 -->
+  <block>
+    <view class="newYear">
+      优衣库恭喜新春
+    </view>
+    <view class="newsort">
+      <view class="newimg">
+        <image class="img1" src="https://6368-chenmujing-2gvu8h64e76e21a4-1304585122.tcb.qcloud.la/new1.jpg?sign=034cd3c07bb5fb2f1cc0a6c6b0091d57&t=1611475368"></image>
+      </view>
+      <view class="newdes">
+        <text class="line1">春节买新衣\n</text>
+        <text>新年新品 衣顺 百顺</text>
+      </view>
+    </view>
+  </block>
 </view>
