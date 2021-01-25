@@ -1,0 +1,15 @@
+{
+  "name": "base64",
+  "version": "1.0.0",
+  "description": "- 图片性能优化， 我们想到了什么？ 减少http数， lazyload throttle\r     - 浏览器 编解码 40kb\r     data:img/jpg;base64, 是一种编码格式      /9j/文件内容\r     google 大量的使用base64 减少请求数  是\r     1. 每一个图片相当于一次http请求，图片多了的话，耗性能比较严重。而将jpg转化成base64格式的图片，则极大地减少了请求数，因为base64是文本格式，可以直接放在body里。\r     2. 优点 (1)base64格式的图片是文本格式,占用内存小,转换后的大小比例大概为1/3,降低了资源服务器的消耗; (2)网页中使用base64格式的图片时,不用再请求..",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webp-converter": "^2.3.1"
+  }
+}
