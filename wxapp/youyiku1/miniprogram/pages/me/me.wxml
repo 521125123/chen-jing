@@ -1,0 +1,76 @@
+<view class="img">
+  <image src="../../images/me-images/2.png.png" link="#"></image>
+  <view class="right">
+    <view class="line1">当前U值<image src="../../images/me-images/3.png.png"></image>
+    </view>
+    <text class="line4">点击查看会员权益</text>
+  </view>
+  <view class="huiyuanma">
+    <image src="../../images/me-images/会员码.png" bindtap="intometa"></image>
+  </view>
+</view>
+<view class="tabel1">
+  <view class="row">
+    <view class="cell">
+      <image src="../../images/me-images/shangchengdingdan.png"></image>
+      <view>我的订单</view>
+    </view>
+    <view class="cell">
+      <image src="../../images/me-images/tuihuotuikuan.png"></image>
+      <view>退货退款</view>
+    </view>
+    <view class="cell">
+      <image src="../../images/me-images/chakan.png"></image>
+      <view>我的换货</view>
+    </view>
+  </view>
+  <view class="row">
+    <view class="cell">
+      <image src="../../images/me-images/dingdanxiangqingtihuopingzheng.png"></image>
+      <view>提货凭证</view>
+    </view>
+    <view class="cell">
+      <image src="../../images/me-images/dingdanhuishouzhan.png"></image>
+      <view>订单回收</view>
+    </view>
+    <view class="cell">
+      <image src="../../images/me-images/shenglve.png"></image>
+      <view class="demo1">更多敬请期待</view>
+    </view>
+
+  </view>
+  <view class="table2">
+    <view class="demo2">我的服务</view>
+    <view class="row">
+      <view class="cell">
+        <image src="../../images/me-images/youhuiquan.png"></image>
+        <view>优惠券</view>
+      </view>
+      <view class="cell">
+        <image src="../../images/me-images/shoucangjia.png"></image>
+        <view>收藏夹</view>
+      </view>
+      <view class="cell">
+        <image src="../../images/me-images/zhanneixin.png"></image>
+        <view>站内信</view>
+      </view>
+    </view>
+    <view class="row">
+      <view class="cell">
+        <image src="../../images/me-images/gerenziliao.png"></image>
+        <view>个人资料</view>
+      </view>
+      <view class="cell">
+        <image src="../../images/me-images/dizhi.png"></image>
+        <view>地址簿</view>
+      </view>
+      <view class="cell">
+        <image src="../../images/me-images/shenglve.png"></image>
+        <view class="demo1">更多敬请期待</view>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <button class="btn">切换账号</button>
+  </view>
+</view>

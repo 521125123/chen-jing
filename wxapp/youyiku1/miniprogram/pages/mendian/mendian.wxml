@@ -1,0 +1,17 @@
+<!--miniprogram/pages/location/lacation.wxml-->
+<view class="header" bindtap="orientation">
+<image src="/images/location.png" class="header-img"/>
+<view class="header-text">江西省宜春市高安市</view>
+<span class="header-location">修改收货地址</span>
+</view>
+<view class="text">江西省  宜春市  高安市   </view>
+<van-search class="search" v-model="value" placeholder="请输入店铺名称" />
+<view class="main">
+  <image src="/images/1.png" class="img"></image>
+  <span class="main-text">扫码购</span>
+  <image src="/images/2.png" class="img"></image>
+  <span class="main-text">门店即送</span>
+  <image src="/images/3.png"class="img"></image>
+  <span class="main-text">门店自取</span>
+</view>
+

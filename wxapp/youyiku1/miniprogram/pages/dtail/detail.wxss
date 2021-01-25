@@ -1,0 +1,69 @@
+/* miniprogram/pages/dtail/detail.wxss */
+view{
+  margin: 0;
+  padding: 0;
+}
+.headed{
+  height: 50px;
+}
+.headed-img{
+  position: relative;
+  height: 50px;
+  width: 75.6px;
+  left:-5px;
+  top:-2px;
+}
+.type-container {
+  display:flex;
+  position: relative;
+  padding: 70rpx 0rpx 0rpx 0rpx;
+  height: 20rpx;
+  position: relative;
+  top:-105px;
+  margin-top: 40rpx;
+  margin-left: 70px;
+  justify-content: flex-start;
+}
+.type-container .type-item {
+  display: flex;
+  font-size:25rpx;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin-left:30px;
+  margin:0 0rpx;
+  color: rgb(12, 12, 12);
+  width: 100px;
+  -webkit-font-smoothing:antialiased;
+
+}
+.type-container .type-item .type-item-on {
+  background-color: white;
+  box-shadow: 3rpx grey;
+  text-decoration: underline  red ;
+}
+.main-text{
+  display: flex;
+  position: relative;
+  margin: 10px 0 20px 0px;
+  left:50rpx;
+  font-weight: bolder;
+}
+.main .main-text .search{
+
+  position: relative;
+  top: -17px;
+  left:80px;
+  height: 20px;
+  width: 240px;
+}
+.main .swiper{
+  height:150px;
+  width: 100%;
+}
+.main .swiper .slide-image{
+  position: relative;
+  margin-top:10px;
+  left:60px;
+  width: 300px;
+}

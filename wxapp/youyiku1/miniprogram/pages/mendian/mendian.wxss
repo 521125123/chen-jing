@@ -1,0 +1,52 @@
+/* miniprogram/pages/location/lacation.wxss */
+.header{
+  display:flex;
+  background-color: black;
+  color:rgb(245, 238, 238);
+  height: 50px;
+  width:100%;
+}
+.header .header-img{
+  width: 20px;
+  margin: 8px 10px 0px 140px;
+  height: 20px;
+}
+.header .header-text{
+  margin-top: 9px;
+  font-size:12px;
+  font-weight: bolder;
+  -webkit-font-smoothing:antialiased;
+}
+.header .header-location{
+  position: relative;
+  font-size:12px;
+  font-weight: bolder;
+  -webkit-font-smoothing:antialiased;
+  top:27px;
+  left:-93px;
+  height: 18px;
+  border-bottom:1px solid rgb(238, 233, 233);
+  padding-bottom:0.88px;
+}
+.text{
+  flex-wrap: wrap;
+  margin-left: 10px;
+}
+.main{
+  margin-top: 12px;
+  border:1px solid black;
+}
+.img{
+  margin:12px 0px 12px 12px;
+  width: 35px;
+  height: 35px;
+}
+.main-text{
+  position: relative;
+  top:-20px;
+  border:1px solid black;
+  border-width: 0 1px 0 0;
+  padding-right: 20px;
+  margin-left: 15px;
+  -webkit-font-smoothing:antialiased;
+}

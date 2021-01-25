@@ -1,0 +1,30 @@
+<!--miniprogram/pages/dtail/detail.wxml-->
+<view class = "headed">
+  <image class="headed-img" src="cloud://projectcloud-5gjhkb9d9e88311f.7072-projectcloud-5gjhkb9d9e88311f-1304520149/src=http___img.mp.itc.cn_upload_20170512_a66bcab1f0f640378954c50470e6c9e1_th.jpg&refer=http___img.mp.itc.jpg"/>
+<view class="type-container">
+    <view class="type-item" 
+    wx:for="{{typeCat}}"
+    wx:key="id"
+    >
+      <view data-id="{{item.id}}"
+       class="type-name {{activeTypeId === item.id ? 'type-item-on':''}}"
+       bindtap="typeSwitch"
+       >
+        {{item.name}} 
+      </view>
+    </view> 
+  </view>
+</view>
+<view class="main">
+  <view class="main-text">WOMEN 
+    <van-search class="search" v-model="value" placeholder="请输入搜索关键词" />
+  </view>
+  <swiper class="swiper" indicator-active-color="{{indicatorActiveColor}}" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+      <block wx:for="{{imgUrls}}" wx:key="key">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- 商品列表 -->
+</view>

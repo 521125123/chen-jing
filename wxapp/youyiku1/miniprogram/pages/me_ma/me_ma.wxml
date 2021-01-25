@@ -1,0 +1,12 @@
+<view class="demo1">
+  <image src="../../images/me-images/2.png.png"></image>
+</view>
+<view class="demo2">
+  请向收银员出示会员码累积会员权益
+</view>
+<view class="demo3">
+  <image src="../../images/me-images/条形码.png"></image>
+</view>
+<view class="demo4">
+  1234567890000
+</view>

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "掌上优衣库",
+  "usingComponents": {
+    "van-search":"@vant/weapp/search/index"
+  }
+}

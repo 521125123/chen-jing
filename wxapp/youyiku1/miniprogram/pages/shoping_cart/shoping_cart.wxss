@@ -1,0 +1,136 @@
+page{
+  background-color: rgb(243,244,245);
+}
+.cart{
+  height: 100%;
+  width: 750rpx;
+  /* background-color: white; */
+}
+.header{
+  background-color: white;
+  height: 400rpx;
+  text-align: center;
+  padding-top:200rpx ;
+}
+.header .btn{
+  margin-top: 200rpx;
+  margin-bottom: 10rpx;
+  width: 730rpx;
+  height:100rpx;
+  background-color: red;
+  text-align: center;
+  line-height: 60rpx;
+  color: white;
+}
+.text1{
+  /* background-color: white; */
+  margin-left:20rpx ;
+  margin-top:50rpx ;
+  margin-bottom: 50rpx;
+}
+.main{
+  background-color: white;
+  margin-top: 50rpx;
+  display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap ;
+    width: 750rpx;
+    margin: 1rpx;
+    border-radius: 10rpx 10rpx 0 0;
+}
+
+.clothes{
+  width: 370rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+  margin-bottom: 20rpx;
+  background-color: white;
+  box-shadow: 4.5rpx 4.5rpx 1.5rpx #d3d1d1;
+}
+.clothes-image{
+  width: 370rpx; 
+  height: 370rpx;
+  border: 1rpx;
+}
+.clothes-image image{
+  width: 100%;
+  height: 100%;
+}
+.selectcolor{
+  display: flex;
+  flex-direction: start;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+}
+.selectcolor view{
+  width: 40rpx;
+  height: 40rpx;
+}
+.color1{
+  background-color:rgb(235,234,230);
+  border: 3 solid rgb(211,210,206);
+}
+.color2{
+  background-color:rgb(60,60,62);
+  border: 3 solid black;
+  margin-left: 10rpx;
+}
+.color3{
+  background-color: rgb(153,142,146);
+  border: 3 solid rgb(151,140,146);
+  margin-left: 10rpx;
+}
+.color4{
+  background-color: rgb(216,220,206);
+  border: 3 solid rgb(216,220,206);
+  margin-left: 10rpx;
+}
+.color5{
+  background-color: rgb(144,160,176);
+  border: 3 solid rgb(144,160,176);
+  margin-left: 10rpx;
+}
+.color6{
+  background-color: rgb(145,162,180);
+  border: 3 solid rgb(145,162,180);
+  margin-left: 10rpx;
+}
+.color7{
+  background-color:rgb(108,120,136);
+  border: 3 solid rgb(108,120,136);
+  margin-left: 10rpx;
+}
+.color8{
+  background-color: rgb(48,43,50);
+  border: 3 solid rgb(48,43,50);
+  margin-left: 10rpx;
+}
+.line1{
+  margin-top: 20rpx;
+}
+.line2{
+  clear: both;
+  font-size: 20px;
+  margin-left: 20rpx;
+}
+.line3{
+  font-size: 25px;
+  color: red;
+  margin-left:30rpx;
+}
+.line4{
+  font-size: 20px;
+  color: red;
+  margin-left: 20rpx;
+}
+.line5{
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+}
+.star{
+  color: yellow;
+  font-size: 30px;
+  margin-top: 10rpx;
+  margin-bottom: 80rpx;
+}
+

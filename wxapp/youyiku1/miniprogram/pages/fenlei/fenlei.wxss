@@ -1,0 +1,135 @@
+.header{
+  display:flex;
+}
+.img{
+ height:50px;
+ width:120px;
+}
+.header-hd{
+
+  height: 38px;
+  width: 100px;
+  display: flex;
+  position: relative;
+  left:180px;
+  top: 3px;
+  color: red;
+  background-color: red;
+  border-radius: 30px; 
+   align-items: center;
+  justify-content: center;
+}
+.header-hd .header-hd-C{
+  color: rgb(255, 255, 255);
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+
+}
+.type-container {
+  display:flex;
+  padding: 70rpx 0rpx 0rpx 0rpx;
+  position: relative;
+  top: -100rpx;
+  margin-top: 20rpx;
+  justify-content: flex-start;
+}
+.type-container .type-item {
+  flex: 1;
+  height: 100rpx;
+}
+.type-container .type-item view{
+  font-size:30rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  margin:0 0rpx;
+  background-color:rgb(233, 215, 215);
+  color: rgb(32, 30, 30);
+}
+.type-container .type-item .type-item-on {
+  background-color: white;
+  box-shadow: 3rpx grey;
+  text-decoration: underline  rgb(31, 196, 119) ;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top:-55px;
+  left: 15px;
+  right: 15px;
+  overflow: hidden;
+}
+.type-con{
+  height:60px;
+  border-bottom-width: 100%;
+  line-height: 60px;
+  border-color: red;
+  background-color:white;
+}
+.list .type-con1{
+  height:60px;
+  width: 100%;
+  line-height: 60px;
+  background-color:white;
+  border:1px solid rgb(168, 164, 164);
+  border-width:1px 0px;
+}
+.list .below{
+  height:60px;
+  line-height: 60px;
+  border-bottom-width: 2px;
+  background-color:white;
+  border:1px solid rgb(168, 164, 164);
+  border-width:1px 0px;
+  overflow: hidden;
+}
+
+.list .belowtype-con1{
+  display: flex;
+  padding-top: 10px;
+  flex-direction: column;
+  width: 100%;
+  background-color:white;
+  border:1px solid rgb(168, 164, 164);
+  border-width:1px 0px 0px 0px;
+  color:red;
+}
+.list .belowtype-con1 .type-con-icon{
+  position: relative;
+  left:25px;
+  height: 45px;
+  line-height: 45px;
+  color: rgb(185, 183, 183);
+}
+.list .up{
+  margin: 15px;
+  position:absolute;
+  left:345px;
+  height: 45rpx;
+  width: 45rpx;
+}
+.list .retention{
+  position: relative;
+  background-color: rgb(180, 175, 175);
+  left: -15px;
+  width: 100%;
+  height: 20rpx;
+}
+.showtop{
+  position:fixed;
+  top:680px;
+  right: 10px;
+  left: 340px;
+}
+.showtop .re{
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+
+

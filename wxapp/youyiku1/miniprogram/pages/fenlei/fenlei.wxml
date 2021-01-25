@@ -1,0 +1,49 @@
+<view class="header">
+<image class="img" src="/images/QQ图片20210114184054.jpg"/>
+<view class="header-hd">
+<view class="header-hd-C">优衣库</view>
+</view>
+</view>
+<view class="type-container">
+    <view class="type-item" 
+    wx:for="{{typeCat}}"
+    wx:key="id"
+    >
+      <view data-id="{{item.id}}"
+       class="type-name {{activeTypeId === item.id ? 'type-item-on':''}}"
+       bindtap="typeSwitch"
+       >
+        {{item.name}} 
+      </view>
+    </view> 
+  </view>
+  <view class="list">
+   <view class="type-con" bindtap="detail">{{text[textid].name}}</view>
+   <view class="below{{img==0?'':'type-con1' }}">
+    <view  bindtap="upfold">{{activeTypeId==0?'合作系列':'潮流前线'}}<image bindtap="upfold" class="up" src='{{imagesarray[img]}}'/></view>
+    <view class="type-con-icon" wx:for="{{activeTypeId==0?choose:choose1}}" wx:key="index">{{item.name}}</view>
+    
+   </view>
+   <view class="type-con1">热销Top</view>
+   <view class="type-con1">本周新品</view>
+   <view class="type-con1">限时特优</view>
+   <view class="type-con1">超U优惠专区</view>
+   <view class="below{{change==0?'':'type-con1' }}" >
+    <view  bindtap="upfolda">UT系列<image bindtap="upfolda" class="up" src='{{imagesarray[change]}}'/></view>
+    <view class="type-con-icon">Satoyama</view>
+    <view class="type-con-icon">Jason Polan</view>
+    <view class="type-con-icon">MICKEY ART</view>
+    <view class="type-con-icon">MICKEY ART</view>
+    <view class="type-con-icon">MICKEY ART</view>
+   </view>
+   <view class="retention">  </view>
+   <view class="type-con">{{text[textid+2].name}}<image class="up" src='{{imagesarray[0]}}'/></view>
+    <view class="type-con1">内衣起居服<image class="up" src='{{imagesarray[0]}}'/></view>
+    <view class="type-con1">配置精选</view>
+    <view class="type-con1">特大/特小尺码</view>
+    <view class="type-con1">配置精选</view>
+    <view class="type-con1">配置精选</view>
+  </view>
+<view class="showtop">
+  <image class="re" src="/images/top.png" bindtap="returnhead"/>
+</view>

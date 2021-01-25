@@ -1,0 +1,26 @@
+<!--miniprogram/pages/orientation/orientation.wxml-->
+<view class="head">
+  <view class="header">
+    <view class="header-text">当前位置:</view>
+    <view class="header-location">江西省宜春市高安市<span class="orientation" bindtap="">重新定位</span>
+  </view>
+  </view> 
+   
+  <map class="show-location" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="makertap"></map> 
+  
+
+
+  <view class="main">
+    <view class="add">我的收货地址: 
+  </view> 
+   <view wx:for="{{location}}" wx:key="index" class="main-body">{{item}}</view>
+   <view class="compile">
+     <view class="xuan"> <image src="/images/choose.png" class="chooseimg"/>已选择</view>
+     <view class="xuan">编辑</view>
+     <view class="xuan1">删除</view>
+   </view> 
+   <button class="button">确定</button>
+   <button class="buttontwo">新增收货地址</button>
+   <text class='add1'>您还可以创建十九条地址</text>
+  </view>
+</view>
