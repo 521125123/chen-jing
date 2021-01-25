@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+<body>
+    <button class="btn">点击</button>
+    <script>
+        // 0 但是一般有那么十几毫秒
+        // 不精确
+        const btn = document.querySelector('.btn');
+        let xhr = new XMLHttpRequest();   //  ajax 耗时的任务
+
+        setTimeout(() => {
+            console.log('timeout');
+        },0)
+        btn.addEventListener('click', () => {
+            console.log('btn clicked');
+        },false)
+        // 封装ajax 的请求  回调函数
+        function loadAjaxContent(url,callback) {
+            console.log(xhr.readyState,'-------1');
+            xhr.open('GET',url);  // GET 动词  http 三次握手 建立好通信的通道 几车道
+            console.log(xhr.readyState,'-------2');
+            xhr.onreadystatechange = function() {
+                console.log(xhr.readyState,'-------4');
+                // readyState 有哪几个值 
+                // 0 未初始化,  含没有调用open
+                // 1 请求建立 还没有发送
+                // 2 请求已发送, 正在处理中 pending  服务器正在做一些运算
+                // 3 请求在处理中, 已有部分数据, 大的数据包  分片切割  断点续传
+                // 4 响应已完成 可以获取并使用服务器的响应了
+                if(xhr.readyState ==4 && xhr.status ==200) {
+                    callback(JSON.parse(xhr.responseText));   //xhr 时代 ie6 没有发明json
+                    // json 作为数据传输的格式, 
+                    // 比xml 更轻量 <userInfo><login>ruanyf</login><userInfo>
+                }
+            }
+            xhr.send();
+            console.log(xhr.readyState,'-------3');
+        }
+        // 更精细化的处理异步问题  顺序执行
+        // 不会阻塞  JS node 性能好
+        // 异步任务的同步化
+        // 异步任务  callback -> promise+then -> generator -> async await
+        // 先得到阮一峰 git info
+        // 难后得到阮一峰 所有的repo
+        // promise 出现的前夜  太多就变成回调地狱
+        // loadAjaxContent('http://api.github.com/users/ruanyf',(users) => {
+        //     // console.log(data,"|||||||||||||||||");
+        //     console.log(users,'users');
+        //     loadAjaxContent('http://api.github.com/users/ruanyf/repos',(repos) => {
+        //         console.log(repos,'repos') ;
+        //         loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
+        //             console.log(results,'results') ;
+        //             // loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
+        //             //     console.log(results,'results') ;
+        //             //     loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
+        //             //     console.log(results,'results') ;
+        //             //     });
+        //             // });
+        //         });
+        //     });
+        // });
+        // resolve reject 就是 交出执行的控制权
+        let p1 = new Promise((resolve,reject) => {
+            console.log('bbbb'); // Promise 函数是立即执行的
+            // 耗时的任务封装在Promise内部
+            xhr.open('GET','http://api.github.com/users/ruanyf');
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState ==4 && xhr.status ==200) {
+                    resolve(JSON.parse(xhr.responseText)); 
+                }
+            }
+            xhr.send();
+        })
+
+
+        // let p2 = new Promise((resolve,reject) => {
+        //     console.log('bbbb'); // Promise 函数是立即执行的
+        //     // 耗时的任务封装在Promise内部
+        //     xhr.open('GET','http://api.github.com/users/ruanyf/repos');
+        //     xhr.onreadystatechange = function() {
+        //         if(xhr.readyState ==4 && xhr.status ==200) {
+        //             resolve(JSON.parse(xhr.responseText)); 
+        //         }
+        //     }
+        //     xhr.send();
+        // })
+
+
+
+        // p1
+        //     .then(data => {
+        //         // users
+        //         console.log(data);
+        //     // p2
+        //     //     .then(repos => {
+        //     //         // users
+        //     //         console.log(repos);
+        //     //     })
+        //     })
+        // console.log('aaaa')
+        // ajax -> ?  fetch
+        // fetch('http://api.github.com/users/ruanyf')
+        //     .then(data => {
+        //         console.log('users',data);
+        //         fetch('http://api.github.com/users/ruanyf/repos')
+        //             .then(data => {
+        //                 console.log('repos',data);
+        //             })
+        //     })
+        // fetch('http://api.github.com/users/ruanyf')
+        // // promise
+        //     .then(data => data.json())   //readstream 二进制流 json化  变成json对象 也是要花时间的
+        //     .then(data => {
+        //         console.log('user',data)
+        //         fetch('http://api.github.com/users/ruanyf/repos')
+        //             .then(data => data.json())
+        //             .then(data => {
+        //                 console.log('repos',data)
+        //             })
+        //     })
+        fetch('http://api.github.com/users/ruanyf')
+        // promise
+            .then(data => data.json())   //readstream 二进制流 json化  变成json对象 也是要花时间的
+            .then(data => {
+                console.log('user',data)
+                return fetch('http://api.github.com/users/ruanyf/repos')
+            .then(data => data.json())
+            .then(data => {
+                console.log('repos',data)
+            })
+            })
+    </script>
+</body>
+</html>
