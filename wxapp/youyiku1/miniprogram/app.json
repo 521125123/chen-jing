@@ -1,14 +1,17 @@
 {
-  "pages": [ 
-    "pages/homepage/homepage", 
+  "pages": [
+    "pages/shop_tail/shop_tail",
+    "pages/homepage/homepage",
+  
     "pages/mendian/mendian",
     "pages/fenlei/fenlei",
     "pages/dtail/detail",
     "pages/orientation/orientation",
-     "pages/shoping_cart/shoping_cart",
+    "pages/shoping_cart/shoping_cart",
     "pages/me/me",
-   
+    "pages/me/unme",
     "pages/me_ma/me_ma"
+    
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

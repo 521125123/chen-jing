@@ -34,7 +34,7 @@
                 // 4 响应已完成 可以获取并使用服务器的响应了
                 if(xhr.readyState ==4 && xhr.status ==200) {
                     callback(JSON.parse(xhr.responseText));   //xhr 时代 ie6 没有发明json
-                    // json 作为数据传输的格式, 
+                    // json {login:'ruanyf'}作为数据传输的格式, 
                     // 比xml 更轻量 <userInfo><login>ruanyf</login><userInfo>
                 }
             }
@@ -48,22 +48,22 @@
         // 先得到阮一峰 git info
         // 难后得到阮一峰 所有的repo
         // promise 出现的前夜  太多就变成回调地狱
-        // loadAjaxContent('http://api.github.com/users/ruanyf',(users) => {
-        //     // console.log(data,"|||||||||||||||||");
-        //     console.log(users,'users');
-        //     loadAjaxContent('http://api.github.com/users/ruanyf/repos',(repos) => {
-        //         console.log(repos,'repos') ;
-        //         loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
-        //             console.log(results,'results') ;
-        //             // loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
-        //             //     console.log(results,'results') ;
-        //             //     loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
-        //             //     console.log(results,'results') ;
-        //             //     });
-        //             // });
-        //         });
-        //     });
-        // });
+        loadAjaxContent('http://api.github.com/users/ruanyf',(users) => {
+            // console.log(data,"|||||||||||||||||");
+            console.log(users,'users');
+            loadAjaxContent('http://api.github.com/users/ruanyf/repos',(repos) => {
+                console.log(repos,'repos') ;
+                loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
+                    console.log(results,'results') ;
+                    // loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
+                    //     console.log(results,'results') ;
+                    //     loadAjaxContent('http://api.github.com/search/issues?q=ruanyf',(results) => {
+                    //     console.log(results,'results') ;
+                    //     });
+                    // });
+                });
+            });
+        });
         // resolve reject 就是 交出执行的控制权
         let p1 = new Promise((resolve,reject) => {
             console.log('bbbb'); // Promise 函数是立即执行的
@@ -78,17 +78,17 @@
         })
 
 
-        // let p2 = new Promise((resolve,reject) => {
-        //     console.log('bbbb'); // Promise 函数是立即执行的
-        //     // 耗时的任务封装在Promise内部
-        //     xhr.open('GET','http://api.github.com/users/ruanyf/repos');
-        //     xhr.onreadystatechange = function() {
-        //         if(xhr.readyState ==4 && xhr.status ==200) {
-        //             resolve(JSON.parse(xhr.responseText)); 
-        //         }
-        //     }
-        //     xhr.send();
-        // })
+        let p2 = new Promise((resolve,reject) => {
+            console.log('bbbb'); // Promise 函数是立即执行的
+            // 耗时的任务封装在Promise内部
+            xhr.open('GET','http://api.github.com/users/ruanyf/repos');
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState ==4 && xhr.status ==200) {
+                    resolve(JSON.parse(xhr.responseText)); 
+                }
+            }
+            xhr.send();
+        })
 
 
 

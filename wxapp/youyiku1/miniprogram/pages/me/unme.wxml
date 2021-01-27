@@ -1,0 +1,25 @@
+<!--miniprogram/pages/me/unme.wxml-->
+<view class="unme-container">
+  <!-- UNI
+      QLQ 图标 -->
+  <view class="unme_ico">
+    <text>UNI\nQLQ</text>
+  </view>
+  <!-- 微信登录 -->
+  <view class="unme_weixin">
+      <view class=".unme_weixin_img" >
+        <image class="img" src="../../images/weixin.svg"></image>
+      </view> 
+      <view class="unme_weixin_login">
+       <text>微信登录</text>
+      </view>
+  </view>
+  <!-- 手机登陆 -->
+  <view class="unme_phone">
+    手机号登录
+  </view>
+  <!-- 手机号快速注册 -->
+  <view class="unme_zhuce">
+    手机号快速注册>
+  </view>
+</view>

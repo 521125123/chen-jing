@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async</title>
+</head>
+<body>
+    <button class="btn">点击</button>
+    <script>
+
+        let xhr = new XMLHttpRequest();   //  ajax 耗时的任
+        fetch('http://api.github.com/users/ruanyf')
+        // promise
+            // .then(data => data.json())   //readstream 二进制流 json化  变成json对象 也是要花时间的
+            .then(data => {
+                console.log('user',data)
+            //     return fetch('http://api.github.com/users/ruanyf/repos')
+            // .then(data => data.json())
+            // .then(data => {
+            //     console.log('repos',data)
+            //     return fetch('http://api.github.com/search/issues?q=ruanyf')
+            // })
+            // .then(data => data.json())
+            // .then(data => {
+            //     console.log('results',data);
+            // })
+            })
+    </script>
+</body>
+</html>

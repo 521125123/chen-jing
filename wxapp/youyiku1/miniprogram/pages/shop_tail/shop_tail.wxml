@@ -1,0 +1,89 @@
+<view class='detail-container'>
+    <view class="inform">
+      <text>订单满200元免运费(门店急送订单除外)</text>
+    </view>
+    <view class='detail-info'>
+      <!-- 第一行 -->
+      <view class='line1'>
+        <!-- 名字 -->
+        <view>【新年红】</view>
+        <view class="star">
+          ★★★★★
+        </view>
+      </view>
+      <!-- 第二行 -->
+      <view class='swiperContainer'>
+        <!-- 组件轮播图 -->
+        <detail-swiper></detail-swiper>
+      </view>
+      <!-- 第三行 -->
+      <view class='line3'>
+        <view class='price'>
+          <text>￥129.00\n限时特优</text>
+        </view>
+        <view class='purchaseFreq'>
+          <text>
+            初上市价格:￥199.00\n
+            支持30天无理由退换货
+          </text>
+        </view>
+      </view>
+      <view class=".divLine"></view>
+      <view class="line4" bindtap="">
+        <!-- 点击事件，点击进入与点击添加购物车一样的画面 -->
+        <view class="select">
+          <text space="ensp"> 请选择配送方式,颜色,尺码,数量              ></text>
+        </view>
+      </view>
+    </view>
+    <view class='other-info'>
+      <!-- 选项卡 -->
+      <view class="goods-tab-box">
+          <view class="goods-tab-nav {{curIndex === 0 ?'on':''}}" bindtap="bindTap" data-index="0">详情</view>
+          <view class="goods-tab-nav {{curIndex === 1 ?'on':''}}" bindtap="bindTap" data-index="1">评论</view>
+          <view class="goods-tab-nav {{curIndex === 2 ?'on':''}}" bindtap="bindTap" data-index="2">咨询</view>
+      </view>
+    </view>
+    <view class='detail-nav'>
+    <!-- 购物车 -->
+
+      <view class='cart' bindtap='goToCart'>
+        <image src="../../images/shouye.svg" mode='scaleToFill'></image>
+        <view>首页</view>
+      </view>
+      <view class='cart' bindtap='goToCart'>
+        <image src="../../images/kefu.svg" mode='scaleToFill'></image>
+        <view>客服</view>
+      </view>
+      <view class='cart' bindtap='goToCart'>
+        <image src="../../images/shoping-car.svg" mode='scaleToFill'></image>
+        <view>购物车</view>
+      </view>
+      <view class='addToCart' bindtap='addToCart'>添加至购物车</view>
+      <view class='buy' bindtap='toBuy'>立即购买</view>
+    </view>
+
+    <!-- 弹窗 -->
+  <view class="popUpWindow" hidden="{{popUpHidden}}">
+    <view class="popUpMask">
+      <view class="popCard">
+        <view style="width:700rpx" bindtap="popCancel">
+          <icon type="cancel" size="20" color="grey" style="float:right"/>
+        </view>
+        <view class="popName">{{fruitDetail.name}}</view>
+        <view class="popPrice">${{fruitDetail.price}}</view>
+        <view class="popCount">
+          <view class="word">购买数量</view>
+          <view class="plusMinus">
+            <view class="minus" bindtap="minusCount">-</view>
+            <view class="count" >{{popCartCount}}</view>
+            <view class="plus" bindtap="plusCount">+</view>
+          </view>
+        </view>
+        <view class="popButton" bindtap="toCart">加入购物车</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+

@@ -43,6 +43,8 @@
     <view class='buy' bindtap='toBuy'>立即购买</view>
   </view>
 
+  
+  <!-- 弹窗 -->
   <view class="popUpWindow" hidden="{{popUpHidden}}">
   <!-- ssssssssss 购买数量  -->
     <view class="popUpMask">

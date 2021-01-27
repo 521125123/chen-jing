@@ -1,0 +1,55 @@
+/* miniprogram/pages/me/unme.wxss */
+.unme-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  top: 350rpx;
+}
+.unme_ico {
+  height: 100rpx;
+  width: 90rpx;
+  text-align: center;
+  background-color: red;
+  font-size: 35rpx;
+  font-weight: bold;
+  color: aliceblue;
+  position: relative;
+  right: -360rpx;
+  margin-bottom: 100rpx; 
+}
+.unme_weixin {
+  width: 690rpx;
+  height: 100rpx;
+  display: flex;
+  border: 1px solid green;
+  margin: 0 30rpx 0 30rpx;
+  margin-bottom: 30rpx;
+}
+.unme_weixin_img{
+  width: 350rpx;
+}
+.unme_weixin_img .img {
+  width: 80rpx;
+  height: 100rpx;
+  margin-left: 260rpx;
+}
+.unme_weixin_login {
+  width: 340rpx;
+  font-size: 35rpx;
+  line-height: 100rpx;
+}
+.unme_phone {
+  width: 690rpx;
+  height: 100rpx;
+  border: 1px solid black;
+  margin: 0 30rpx 0 30rpx;
+  font-size: 35rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.unme_zhuce {
+  width: 690rpx;
+  height: 50rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
