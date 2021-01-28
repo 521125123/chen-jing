@@ -25,4 +25,14 @@ App({
         fail: console.err
       })
   },
+  getInfoWhere1(setName, ruleObj, callback) {
+    const db = wx.cloud.database();
+    db
+      .collection(setName)
+      .where(ruleObj) // 条件
+      .get({
+        success: callback,
+        fail: console.err
+      })
+  },
 })

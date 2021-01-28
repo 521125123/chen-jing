@@ -1,0 +1,4 @@
+<!--components/block/block.wxml-->
+<block wx:for="{{colors}}">
+  <view class="item.color"></view>
+</block>

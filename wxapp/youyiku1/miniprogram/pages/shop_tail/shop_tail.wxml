@@ -6,24 +6,24 @@
       <!-- 第一行 -->
       <view class='line1'>
         <!-- 名字 -->
-        <view>【新年红】</view>
+        <view>{{clothesDetail.name}}</view>
         <view class="star">
-          ★★★★★
+          {{clothesDetail.star}}
         </view>
       </view>
       <!-- 第二行 -->
       <view class='swiperContainer'>
         <!-- 组件轮播图 -->
-        <detail-swiper></detail-swiper>
+        <detail-swiper imgUrls="{{clothesDetail.temPictures}}"></detail-swiper>
       </view>
       <!-- 第三行 -->
       <view class='line3'>
         <view class='price'>
-          <text>￥129.00\n限时特优</text>
+          <text>{{clothesDetail.price}}\n限时特优</text>
         </view>
         <view class='purchaseFreq'>
           <text>
-            初上市价格:￥199.00\n
+            初上市价格:{{clothesDetail.InitialPrice}}\n
             支持30天无理由退换货
           </text>
         </view>
@@ -31,7 +31,7 @@
       <view class=".divLine"></view>
       <view class="line4" bindtap="">
         <!-- 点击事件，点击进入与点击添加购物车一样的画面 -->
-        <view class="select">
+        <view class="select" bindtap='addToCart'>
           <text space="ensp"> 请选择配送方式,颜色,尺码,数量              ></text>
         </view>
       </view>
@@ -62,28 +62,25 @@
       <view class='addToCart' bindtap='addToCart'>添加至购物车</view>
       <view class='buy' bindtap='toBuy'>立即购买</view>
     </view>
-
+    
     <!-- 弹窗 -->
-  <view class="popUpWindow" hidden="{{popUpHidden}}">
-    <view class="popUpMask">
-      <view class="popCard">
-        <view style="width:700rpx" bindtap="popCancel">
-          <icon type="cancel" size="20" color="grey" style="float:right"/>
-        </view>
-        <view class="popName">{{fruitDetail.name}}</view>
-        <view class="popPrice">${{fruitDetail.price}}</view>
-        <view class="popCount">
-          <view class="word">购买数量</view>
-          <view class="plusMinus">
-            <view class="minus" bindtap="minusCount">-</view>
-            <view class="count" >{{popCartCount}}</view>
-            <view class="plus" bindtap="plusCount">+</view>
-          </view>
-        </view>
-        <view class="popButton" bindtap="toCart">加入购物车</view>
+  <view class=".popUpWindow" hidden="{{popUpHidden}}">
+    <view class="popCard1">
+      <view>
+        <image class="image1" src="{{clothesDetail.imgUrl}}"></image>
+      </view>
+      <view class="center1"> 
+        <text class="popPrice">{{clothesDetail.price}}\n</text>
+        <text class="secolor">请选择尺码与颜色</text>
+      </view>
+      <view class="icon" bindtap="popCancel">
+        <icon type="cancel" size="20" color="grey"/>
       </view>
     </view>
   </view>
+  <!-- <view class="se">
+
+  </view> -->
 </view>
 
 

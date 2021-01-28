@@ -3,7 +3,7 @@
   width:100%;
   height: 600rpx;
 }
-
+/* 公告 样式 */
 .inform {
   height: 50rpx;
   background-color: rgb(146, 139, 139);
@@ -12,9 +12,11 @@
   line-height: 50rpx;
   text-align: center;
 }
+/* 评价星级样式 */
 .star{
   color: yellow;
   text-align: end;
+
 }
 .detail-info {
   background-color: white;
@@ -23,6 +25,7 @@
   font-size: 10rpx;
   height: 80rpx;
   padding: 30rpx 30rpx 10rpx 30rpx;
+  margin-bottom: 10rpx;
 }
 .detail-info .line1 view {
   font-size: 40rpx;
@@ -64,19 +67,24 @@
   background-color: #fff;
   line-height: 80rpx;
 }
-
-
-
-
-
-
-
-.goods-tab-nav {display: inline-block;width: 33.33%;height: 90rpx;line-height: 90rpx;border-bottom: 1rpx solid #ededed;box-sizing: border-box;text-align: center;color: #c7c7cb;
+/* 详情 评论 咨询样式 */
+.goods-tab-nav {
+  display: inline-block;
+  width: 33.3%;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 1rpx solid #ededed;
+  box-sizing: border-box;
+  text-align: center;
+  color: #c7c7cb;
 }
-.goods-tab-nav.on {color: rgba(255, 132, 132, 0.979);border-bottom: 5rpx solid rgba(255, 132, 132, 0.979);
+.goods-tab-nav.on {
+  color: rgba(255, 132, 132, 0.979);
+  border-bottom: 5rpx solid rgba(255, 132, 132, 0.979);
 }
 .theDetail {padding: 40rpx;font-size: 45rpx;color: grey;text-align: center}
 .WxComment {padding: 0;margin: 0;}
+
 
 .detail-nav {
   position: fixed;
@@ -124,53 +132,48 @@
 
 
 /*弹窗*/
-.popUpWindow {
+/* .popUpWindow {
   z-index: 5;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height:100%;
-}
-.popUpMask {
-  z-index:6;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128,0.96);
-}
-.popUpMask .popCard {
+} */
+.popUpWindow {
   z-index: 7;
   height: 100vh;
-  padding:20rpx 0 30rpx 30rpx;
+  padding:20rpx 0 0 30rpx;
   position: fixed;
+  top:0;
   bottom: 0;
   left: 0;
   width: 100%;
   background-color:white;
-  display:flex;
-  flex-direction: column;
+}
+.popCard1 {
+  height: 320rpx;
+  display: flex;
+}
+.popCard1 .image1 {
+  width: 300rpx;
+  height: 300rpx;
+}
+.popCard1 .center1 {
+  width: 360rpx;
+  padding-left: 10rpx;
+  
+}
+.popCard1 .icon {
+  width: 40rpx;
 }
 
-.popUpMask .popCard .popName {
-  font-size: 45rpx;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
 
-.popUpMask .popCard .popPrice {
-  font-size: 30rpx;
+.popCard1 .popPrice {
+  font-size: 50rpx;
   color: rgb(245, 71, 37);
-  width: 700rpx;
-  padding-bottom: 10rpx;
-  border-bottom: rgb(266, 233, 233) 1px solid;
 }
-.popUpWindow .popUpMask .popCard .popCount {display: flex;justify-content: space-between;width: 700rpx;font-size: 35rpx;padding: 25rpx 30rpx 0 0;color: grey}
-.popUpWindow .popUpMask .popCard .popCount .plusMinus {display: flex;justify-content: space-between}
-.popUpWindow .popUpMask .popCard .popCount .plusMinus view {width: 40rpx;text-align: center;border: rgb(231, 229, 229) 1rpx solid;}
-.popUpWindow .popUpMask .popCard .popButton {position: fixed;bottom: 0;left: 0;height: 90rpx;line-height: 90rpx;width: 100%;background-color: rgb(247, 112, 71);color: white;text-align: center}
+.popCard1 .secolor {
+  font-size: 30rpx;
+  line-height: 200rpx;
+}

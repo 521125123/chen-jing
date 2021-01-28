@@ -32,11 +32,11 @@ page{
   background-color: white;
   margin-top: 50rpx;
   display: flex;
-    justify-content: space-between;
-    flex-wrap:wrap ;
-    width: 750rpx;
-    margin: 1rpx;
-    border-radius: 10rpx 10rpx 0 0;
+  justify-content: space-between;
+  flex-wrap: wrap ;
+  width: 750rpx;
+  margin: 1rpx;
+  border-radius: 10rpx 10rpx 0 0;
 }
 
 .clothes{
@@ -110,27 +110,30 @@ page{
 }
 .line2{
   clear: both;
-  font-size: 20px;
+  font-size: 15px;
   margin-left: 20rpx;
 }
 .line3{
-  font-size: 25px;
+  font-size: 20px;
   color: red;
-  margin-left:30rpx;
+  margin-left:20rpx;
 }
 .line4{
-  font-size: 20px;
+  font-size: 15px;
   color: red;
   margin-left: 20rpx;
 }
 .line5{
+  font-size: 20rpx;
   margin-top: 5rpx;
   margin-left: 20rpx;
 }
 .star{
+  height: 50rpx;
   color: yellow;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 10rpx;
   margin-bottom: 80rpx;
 }
+
 

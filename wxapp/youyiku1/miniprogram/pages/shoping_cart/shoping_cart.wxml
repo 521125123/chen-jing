@@ -6,93 +6,31 @@
   <view class="text1">
     店铺推荐
   </view>
-  <view class="main">
-    <view class="clothes">
-      <view class="clothes-image">
-        <image src="./image/1.png" link="#"></image>
+  <view class="main" data-cid="{{clothes._id}}">
+    <block wx:for="{{clothesInfo}}" wx:key="clothesId">
+        <view class="clothes" bindtap="tapToDetail" data-fid="{{item._id}}">
+          <view class="clothes-image">
+            <image src="{{item.imgUrl}}" mode="aspectFill"/>
+          </view>
+          <view class="clothes-info">
+            <view class="selectcolor">
+              <block wx:for="{{item.color}}" wx:key="index" wx:for-item="cell">
+                <view class="{{cell}}"></view>
+              </block>
+            </view>
+            <view class="line1" style="clear:both;">
+              <text style="float:left; margin-left:20rpx;">{{item.category}}</text>
+              <text style="float:right;margin-right:20rpx">{{item.model}}</text>
+            </view>
+            <view class="line2">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="line3">{{item.price}}</view>
+            <view class="line4">限时特优</view>
+            <view class="line5">初上市价格: {{item.InitialPrice}}</view>
+            <view class="star">{{item.star}}</view>
+        </view>
       </view>
-      <view class="clothes-info">
-        <view class="selectcolor">
-          <view class="color1"></view>
-          <view class="color2"></view>
-          <view class="color3"></view>
-          <view class="color4"></view>
-          <view class="color5"></view>
-        </view>
-        <view class="line1" style="clear:both;">
-          <text style="float:left; margin-left:20rpx;">女装</text>
-          <text style="float:right;margin-right:20rpx">S-XL</text>
-        </view>
-        <view class="line2">
-          <text>高级轻型羽绒休闲茄克</text>
-          <text>438258</text>
-        </view>
-        <view class="line3">¥399.00</view>
-        <view class="line4">限时特优</view>
-        <view class="line5">初上市价格: ¥499.00</view>
-      </view>
-    </view>
-    <view class="clothes">
-      <view class="clothes-image">
-        <image src="./image/3.png" link="#"></image>
-      </view>
-      <view class="clothes-info">
-        <view class="selectcolor">
-          <view class="color2"></view>
-          <view class="color6"></view>
-          <view class="color7"></view>
-          <view class="color8"></view>
-        </view>
-        <view class="line1" style="clear:both;">
-          <text style="float:left; margin-left:20rpx;">女装</text>
-          <text style="float:right;margin-right:20rpx">150/54A-175/90B</text>
-        </view>
-        <view class="line2">
-          <text>高腰修身直筒牛仔裤(牛仔神库)</text>
-          <text>429107</text>
-        </view>
-        <view class="line3">¥249.00</view>
-        <view class="line4">限时特优</view>
-        <view class="line5">初上市价格: ¥249.00</view>
-        <view class="star">★★★★★<text style="color:black;font-size:20px">(98)</text></view>
-      </view>
-    </view>
-    <view class="clothes">
-      <view class="clothes-image">
-        <image src="./image/2.png" link="#"></image>
-      </view>
-      <view class="clothes-info">
-        <view class="line1" style="clear:both;">
-          <text style="float:left; margin-left:20rpx;">女装</text>
-          <text style="float:right;margin-right:20rpx"><XS-XXL></XS-XXL></text>
-        </view>
-        <view class="line2">
-          <text>弹力双面针织喇叭连衣裙(七分袖)</text>
-          <text>434401</text>
-        </view>
-        <view class="line3">¥199.00</view>
-        <view class="line4">限时特优</view>
-        <view class="line5">初上市价格: ¥249.00</view>
-      </view>
-    </view>
-    <view class="clothes">
-      <view class="clothes-image">
-        <image src="./image/4.png" link="#"></image>
-      </view>
-      <view class="clothes-info">
-        <view class="line1" style="clear:both;">
-          <text style="float:left; margin-left:20rpx;">女装</text>
-          <text style="float:right;margin-right:20rpx">XS-3XL</text>
-        </view>
-        <view class="line2">
-          <text>3D全棉V领针织衫(长袖)(缤纷针织)</text>
-          <text>435904</text>
-        </view>
-        <view class="line3">¥199.00</view>
-        <view class="line4">限时特优</view>
-        <view class="line5">初上市价格: ¥249.00</view>
-        <view class="star">★★★★★<text style="color:black;font-size:20px">(1)</text></view>
-      </view>
-    </view>
+    </block>
   </view>
 </view>

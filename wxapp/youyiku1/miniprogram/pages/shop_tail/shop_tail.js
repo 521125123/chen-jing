@@ -1,11 +1,14 @@
 // miniprogram/pages/shop_tail/shop_tail.js
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    popUpHidden:true
+    popUpHidden:false,
+    clothesID:null,
+    clothesDetail:{}
 
   },
   addToCart() {
@@ -13,10 +16,24 @@ Page({
       popUpHidden: false
     })
   },
+  popCancel() {
+    this.setData({
+      popUpHidden: true
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let _id = options._id;
+    this.setData({
+      clothesID: _id
+    })
+    app.getInfoWhere1('youyiku', {_id: _id}, e => {
+      this.setData({
+        clothesDetail: e.data["0"]
+      })
+    })
 
   },
 
