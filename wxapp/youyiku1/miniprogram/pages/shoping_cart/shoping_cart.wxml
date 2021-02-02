@@ -1,4 +1,77 @@
-<view class="cart">
+<!-- shop_cart.wxml -->
+<!-- 购物车有东西,显示 -->
+<view class="hasCart-containter" wx:if="{{!hasCarts}}">
+ <!-- 全选按钮和编辑全部 -->
+ <view class="header_top">
+   <view>
+    <checkbox-group bindchange="">
+      <checkbox value="全选"/>全选
+    </checkbox-group>
+   </view>
+   <view class="compileAll" bindtap="compileAll">
+     编辑全部
+   </view>
+ </view>
+ <view class="slide_containter">
+    <!-- 快速配速 -->
+ <view class="fast_delivery">
+  <checkbox-group bindchange="" >
+    <checkbox value="快速配速"/>快速配速
+  </checkbox-group>
+ </view>
+ <!-- 购物车显示 -->
+ <block wx:for="{{cartsInfo}}" wx:key="index">
+  <view class="cart_goods">
+    <view class="cart_herder">
+     <!-- 复选框 -->
+     <view>
+       
+       <checkbox-group bindchange="" >
+         <checkbox value=""/>
+       </checkbox-group>
+     </view>
+      <!-- 修改配送方式 -->
+     <view>
+      修改配送方式
+     </view>
+    </view>
+    <view class="cart_middle">
+        <!-- 购物车图片 -->
+      <view class="cart_left">
+        <image></image>
+      </view>
+      <!-- 购物车商品详情 -->
+      <view class="cart_right">
+        
+      </view>
+    </view>
+    <!-- 加减和删除按钮 -->
+    <view class="cart_bottom">
+    </view>
+  </view>
+ </block>
+ <!-- 计算按钮 -->
+ <view>
+
+ </view>
+ </view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 购物车没有东西时，显示 -->
+<view wx:if="{{hasCarts}}">
   <view class="header">
     购物车没有商品
     <button class="btn">继续购物</button>

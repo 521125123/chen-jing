@@ -1,64 +1,11 @@
+/* miniprogram/pages/goods/goods.wxss */
 page{
   background-color: rgb(243,244,245);
 }
-.hasCart-containter{
+.cart{
   height: 100%;
   width: 750rpx;
-}
-.header_top {
-  position: fixed;
-  display: flex;
-  top: 0;
-  left: 10rpx;
-  height: 70rpx;
-  width: 100vw;
-}
-.compileAll {
-  font-size: 30rpx;
-  position: fixed;
-  right: 20rpx;
-  text-decoration: underline;
-}
-.slide_containter {
-  position: relative;
-  top: 85rpx;
-  overflow-y: scroll;
-}
-.slide_containter .fast_delivery {
-  padding-top: 10rpx;
-  padding-left: 10rpx;
-  height: 90rpx;
-  border-bottom: 1px solid grey;
-}
-.slide_containter .cart_goods{
-  height: 200px;
-}
-.cart_goods .cart_herder {
-  height: 70rpx;
-  display: flex;
-  padding: 20rpx 10rpx 10rpx 10rpx;
-  justify-content: space-between;
-}
-.cart_goods .cart_middle {
-  height: 150rpx;
-}
-
-
-.header{
-  background-color: white;
-  height: 400rpx;
-  text-align: center;
-  padding-top:200rpx ;
-}
-.header .btn{
-  margin-top: 200rpx;
-  margin-bottom: 10rpx;
-  width: 730rpx;
-  height:100rpx;
-  background-color: red;
-  text-align: center;
-  line-height: 60rpx;
-  color: white;
+  /* background-color: white; */
 }
 .text1{
   /* background-color: white; */

@@ -14,7 +14,7 @@
     <index-swiper imgUrls="{{imgUrls}}"></index-swiper>
   </view>
    <!-- 六张特别活动宣告片 -->
-  <view class="activity">
+  <view class="activity" bindtap="toGoods">
     <!-- 宣传活动 -->
     <view class="disconunt">
       <text class="line1">解锁66元\n新意红包</text>

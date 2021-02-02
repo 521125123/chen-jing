@@ -1,5 +1,6 @@
 <view class='detail-container'>
-    <view class="inform">
+    <view class="detail">
+      <view class="inform">
       <text>订单满200元免运费(门店急送订单除外)</text>
     </view>
     <view class='detail-info'>
@@ -46,7 +47,6 @@
     </view>
     <view class='detail-nav'>
     <!-- 购物车 -->
-
       <view class='cart' bindtap='goToCart'>
         <image src="../../images/shouye.svg" mode='scaleToFill'></image>
         <view>首页</view>
@@ -62,25 +62,63 @@
       <view class='addToCart' bindtap='addToCart'>添加至购物车</view>
       <view class='buy' bindtap='toBuy'>立即购买</view>
     </view>
+    </view>
     
     <!-- 弹窗 -->
-  <view class=".popUpWindow" hidden="{{popUpHidden}}">
+  <view class="popUpWindow" hidden="{{popUpHidden}}">
+    <!-- 弹窗头部 -->
     <view class="popCard1">
       <view>
         <image class="image1" src="{{clothesDetail.imgUrl}}"></image>
       </view>
       <view class="center1"> 
         <text class="popPrice">{{clothesDetail.price}}\n</text>
-        <text class="secolor">请选择尺码与颜色</text>
+        <block wx:if="{{Color=='' && size ==''}}">
+          <text class="secolor">{{Color}}</text>
+        </block>
+        <block wx:else>
+          <text class="secolor">已选:{{Color}}\n{{size}}</text>
+        </block>
       </view>
       <view class="icon" bindtap="popCancel">
         <icon type="cancel" size="20" color="grey"/>
       </view>
     </view>
+    <!-- 颜色的选择 -->
+    <view class="secolor">
+      <view class="textcolor">颜色:{{Color}}</view>
+      <view class="colorline">
+        <block wx:for="{{clothesDetail.color}}" wx:key="index">
+          <view class="{{item}}" bindtap="selectColor" data-color1="{{item}}"></view>
+        </block>
+      </view>
+    </view>
+    <!-- 尺码的选择 -->
+    <view class="Size">
+      <view class="textSize">
+        尺码:{{size}}
+      </view>
+      <view class="Sizebox">
+        <block wx:for="{{clothesDetail.clothesSize}}" wx:key="i">
+          <view class="smallbox" data-clothesize="{{item}}"
+          bindtap="selectSize">
+            {{item}}
+          </view>
+        </block>
+      </view>
+    </view>
+    <!-- 购买数量 -->
+    <view class="popCount">
+      <view class="word">购买数量</view>
+      <view class="plusMinus">
+        <view class="minus" bindtap="minusCount">-</view>
+        <view class="count" >{{popCartCount}}</view>
+        <view class="plus" bindtap="plusCount">+</view>
+        <view class="textenough">库存充足</view>
+      </view>
+    </view>
+    <!-- 确定按钮 -->
+    <view class="popButton" bindtap="toCart">确定</view>
   </view>
-  <!-- <view class="se">
-
-  </view> -->
 </view>
-
 

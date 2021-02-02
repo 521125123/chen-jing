@@ -1,18 +1,13 @@
 {
   "pages": [
     "pages/shoping_cart/shoping_cart",
+    "pages/goods/goods",
     "pages/shop_tail/shop_tail",
-    
-    
-    
-    
     "pages/homepage/homepage",
-  
     "pages/mendian/mendian",
     "pages/fenlei/fenlei",
     "pages/dtail/detail",
     "pages/orientation/orientation",
-    
     "pages/me/me",
     "pages/me/unme",
     "pages/me_ma/me_ma"

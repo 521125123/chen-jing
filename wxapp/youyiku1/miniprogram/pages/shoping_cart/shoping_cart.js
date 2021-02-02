@@ -6,6 +6,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    cartsInfo:[],
+    isflag:false,
+    hasCarts:true,
     clothesInfo:[]
   },
   /**
@@ -32,7 +35,12 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    
+    let cartsInfo = wx.getStorageSync('carts');
+    if(cartsInfo.length > 0){
+      this.setData({
+        hasCarts: false
+      })
+    }
     app.getInfoWhere('youyiku',e => {
       this.setData({
         clothesInfo: e.data,

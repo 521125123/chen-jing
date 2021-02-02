@@ -1,0 +1,33 @@
+<!-- goods.wxml -->
+<view class="cart">
+  <view class="text1">
+    店铺推荐
+  </view>
+  <view class="main" data-cid="{{clothes._id}}">
+    <block wx:for="{{clothesInfo}}" wx:key="clothesId">
+        <view class="clothes" bindtap="tapToDetail" data-fid="{{item._id}}">
+          <view class="clothes-image">
+            <image src="{{item.imgUrl}}" mode="aspectFill"/>
+          </view>
+          <view class="clothes-info">
+            <view class="selectcolor">
+              <block wx:for="{{item.color}}" wx:key="index" wx:for-item="cell">
+                <view class="{{cell}}"></view>
+              </block>
+            </view>
+            <view class="line1" style="clear:both;">
+              <text style="float:left; margin-left:20rpx;">{{item.category}}</text>
+              <text style="float:right;margin-right:20rpx">{{item.model}}</text>
+            </view>
+            <view class="line2">
+              <text>{{item.name}}</text>
+            </view>
+            <view class="line3">{{item.price}}</view>
+            <view class="line4">限时特优</view>
+            <view class="line5">初上市价格: {{item.InitialPrice}}</view>
+            <view class="star">{{item.star}}</view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

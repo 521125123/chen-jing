@@ -14,7 +14,9 @@ App({
       })
     }
 
-    this.globalData = {}
+    this.globalData = {
+      carts:[]
+    }
   },
   getInfoWhere(setName, callback) {
     const db = wx.cloud.database();
@@ -34,5 +36,5 @@ App({
         success: callback,
         fail: console.err
       })
-  },
+  }
 })

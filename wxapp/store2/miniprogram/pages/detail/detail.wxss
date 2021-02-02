@@ -99,4 +99,14 @@
   .popUpWindow .popUpMask .popCard .popCount {display: flex;justify-content: space-between;width: 700rpx;font-size: 35rpx;padding: 25rpx 30rpx 0 0;color: grey}
   .popUpWindow .popUpMask .popCard .popCount .plusMinus {display: flex;justify-content: space-between}
   .popUpWindow .popUpMask .popCard .popCount .plusMinus view {width: 40rpx;text-align: center;border: rgb(231, 229, 229) 1rpx solid;}
-  .popUpWindow .popUpMask .popCard .popButton {position: fixed;bottom: 0;left: 0;height: 90rpx;line-height: 90rpx;width: 100%;background-color: rgb(247, 112, 71);color: white;text-align: center}
+  .popUpWindow .popUpMask .popCard .popButton {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 90rpx;
+    line-height: 90rpx;
+    width: 100%;
+    background-color: rgb(247, 112, 71);
+    color: white;
+    text-align: center
+  }

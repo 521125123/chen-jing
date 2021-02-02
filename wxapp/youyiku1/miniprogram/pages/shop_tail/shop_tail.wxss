@@ -1,9 +1,9 @@
 /* miniprogram/pages/shop_tail/shop_tail.wxss */
-.detail-image {
-  width:100%;
-  height: 600rpx;
-}
+
 /* 公告 样式 */
+.detail {
+  overflow-y: scroll;
+}
 .inform {
   height: 50rpx;
   background-color: rgb(146, 139, 139);
@@ -85,7 +85,7 @@
 .theDetail {padding: 40rpx;font-size: 45rpx;color: grey;text-align: center}
 .WxComment {padding: 0;margin: 0;}
 
-
+/* 固定定位之添加至购物车 */
 .detail-nav {
   position: fixed;
   display: flex;
@@ -131,20 +131,14 @@
 
 
 
-/*弹窗*/
-/* .popUpWindow {
-  z-index: 5;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height:100%;
-} */
+
 .popUpWindow {
-  z-index: 7;
+  
+  position: fixed;
+  z-index: 999;
   height: 100vh;
   padding:20rpx 0 0 30rpx;
-  position: fixed;
+  overflow-y: scroll;
   top:0;
   bottom: 0;
   left: 0;
@@ -161,6 +155,7 @@
 }
 .popCard1 .center1 {
   width: 360rpx;
+  height:320rpx;
   padding-left: 10rpx;
   
 }
@@ -174,6 +169,123 @@
   color: rgb(245, 71, 37);
 }
 .popCard1 .secolor {
+  border: none;
   font-size: 30rpx;
-  line-height: 200rpx;
+  line-height: 100rpx;
+}
+.secolor {
+  height: 200rpx;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.secolor .textcolor,.Size .textSize{
+  height: 80rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+.secolor .colorline {
+  display: flex;
+  flex-direction: start;
+}
+.secolor .colorline view {
+  height: 50rpx;
+  width: 50rpx;
+}
+.Size {
+  height: auto;
+  padding-top: 20rpx;
+  border-bottom: 1px solid grey;
+}
+.Size .Sizebox{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Size .Sizebox .smallbox {
+  height: 80rpx;
+  border: 1px solid #c2bab8;
+  font-size: 30rpx;
+  margin: 0 10rpx 20rpx 0;
+  line-height: 80rpx;
+}
+.color1{
+  background-color:rgb(235,234,230);
+  border: 3 solid rgb(211,210,206);
+}
+.color2{
+  background-color:rgb(60,60,62);
+  border: 3 solid black;
+  margin-left: 10rpx;
+}
+.color3{
+  background-color: rgb(153,142,146);
+  border: 3 solid rgb(151,140,146);
+  margin-left: 10rpx;
+}
+.color4{
+  background-color: rgb(216,220,206);
+  border: 3 solid rgb(216,220,206);
+  margin-left: 10rpx;
+}
+.color5{
+  background-color: rgb(144,160,176);
+  border: 3 solid rgb(144,160,176);
+  margin-left: 10rpx;
+}
+.color6{
+  background-color: rgb(145,162,180);
+  border: 3 solid rgb(145,162,180);
+  margin-left: 10rpx;
+}
+.color7{
+  background-color:rgb(30, 52, 82);
+  border: 3 solid rgb(108,120,136);
+  margin-left: 10rpx;
+}
+.color8{
+  background-color: rgb(48,43,50);
+  border: 3 solid rgb(48,43,50);
+  margin-left: 10rpx;
+}
+.popUpWindow .popCount {
+  display: flex;
+  justify-content: space-between;
+  width: 700rpx;
+  font-size: 35rpx;
+  padding: 25rpx 30rpx 0 0;
+}
+.popUpWindow .plusMinus {
+  display: flex;
+  justify-content: space-between
+}
+.popCount .word {
+  line-height: 100rpx;
+  width:200rpx;
+}
+.popUpWindow .popCount .plusMinus view {
+  width: 80rpx;
+  height: 80rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align: center;
+ 
+}
+.popCount .plusMinus .count{
+  border: 1px solid grey;
+}
+.popUpWindow .popCount .plusMinus .textenough{
+  font-size: 20rpx;
+  line-height: 80rpx;
+}
+.popUpWindow .popButton {
+  position: fixed;
+  z-index: 999;
+  bottom: 0;
+  left: 0;
+  height: 90rpx;
+  line-height: 90rpx;
+  width: 100%;
+  background-color: rgb(247, 112, 71);
+  color: white;
+  text-align: center
 }
