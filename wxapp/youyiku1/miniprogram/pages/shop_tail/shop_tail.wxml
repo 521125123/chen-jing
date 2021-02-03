@@ -20,11 +20,11 @@
       <!-- 第三行 -->
       <view class='line3'>
         <view class='price'>
-          <text>{{clothesDetail.price}}\n限时特优</text>
+          <text>￥{{clothesDetail.price}}\n限时特优</text>
         </view>
         <view class='purchaseFreq'>
           <text>
-            初上市价格:{{clothesDetail.InitialPrice}}\n
+            初上市价格:￥{{clothesDetail.InitialPrice}}\n
             支持30天无理由退换货
           </text>
         </view>
@@ -72,9 +72,9 @@
         <image class="image1" src="{{clothesDetail.imgUrl}}"></image>
       </view>
       <view class="center1"> 
-        <text class="popPrice">{{clothesDetail.price}}\n</text>
+        <text class="popPrice">￥{{clothesDetail.price}}\n</text>
         <block wx:if="{{Color=='' && size ==''}}">
-          <text class="secolor">{{Color}}</text>
+          <text class="secolor">请选择颜色和尺码</text>
         </block>
         <block wx:else>
           <text class="secolor">已选:{{Color}}\n{{size}}</text>

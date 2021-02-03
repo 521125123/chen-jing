@@ -22,9 +22,9 @@
             <view class="line2">
               <text>{{item.name}}</text>
             </view>
-            <view class="line3">{{item.price}}</view>
+            <view class="line3">￥{{item.price}}</view>
             <view class="line4">限时特优</view>
-            <view class="line5">初上市价格: {{item.InitialPrice}}</view>
+            <view class="line5">初上市价格: ￥{{item.InitialPrice}}</view>
             <view class="star">{{item.star}}</view>
         </view>
       </view>

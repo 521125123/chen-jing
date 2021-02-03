@@ -6,13 +6,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-    popUpHidden:true,
-    clothesID:null,
-    clothesDetail:{},
-    Color:"",
-    size:"",
-    popCartCount:1
+    popUpHidden:false, //购物弹窗是否出现
+    clothesID:null,    //进入详情页的数据库_id
+    clothesDetail:{},  // 获取_id后的信息对象
+    Color:"",          //经过转义的衣服颜色
+    size:"",           // 衣服的尺码
+    popCartCount:1     // 衣服"+","-"的数量
   },
+  // 添加到小程序内置数据库为carts
   toCart() {
     // 逻辑 分成几步， 
     // 1. 加入购物车
@@ -31,11 +32,11 @@ Page({
         if(index === -1){
           
           this.data.clothesDetail.num = this.data.popCartCount;
+          this.data.clothesDetail.checked = false;
           carts.push (this.data.clothesDetail);
-          console.log(this.data.clothesDetail,'Detail');
-          console.log(carts,'Detail-carts');
         }else{
           carts[index].num = carts[index].num + this.data.popCartCount;
+          carts[index].chec
         }
         wx.setStorageSync('carts', carts)
         wx.showToast({
@@ -43,8 +44,12 @@ Page({
           icon: 'success',
           mask: true
         });
+        this.setData({
+          popUpHidden: true
+        })
     }
   },
+  // - 的功能实现
   minusCount() {
     if(this.data.popCartCount <= 1){
       this.setData({
@@ -56,11 +61,13 @@ Page({
       })
     }
   },
+  // + 的功能实现
   plusCount() {
     this.setData({
       popCartCount: this.data.popCartCount + 1
     })
   },
+  // 根据数据中的color转义为中文文字的颜色
   selectColor(e) {
     this.setData({
       Color:e.currentTarget.dataset.color1
@@ -109,17 +116,20 @@ Page({
     }
     this.data.clothesDetail.clothcolor = this.data.Color;
   },
+  // 尺码的显示
   selectSize(e) {
     this.setData({
       size:e.currentTarget.dataset.clothesize
     })
     this.data.clothesDetail.clothsize = this.data.size;
   },
+  // 点击"确定"后退出弹窗
   addToCart() {
     this.setData({
       popUpHidden: false
     })
   },
+  // 点击按钮进入弹窗
   popCancel() {
     this.setData({
       popUpHidden: true
@@ -129,6 +139,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    // 获取跳转的商品_id
     let _id = options._id;
     this.setData({
       clothesID: _id

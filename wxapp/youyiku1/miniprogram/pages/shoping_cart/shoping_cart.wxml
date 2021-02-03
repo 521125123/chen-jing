@@ -2,10 +2,11 @@
 <!-- 购物车有东西,显示 -->
 <view class="hasCart-containter" wx:if="{{!hasCarts}}">
  <!-- 全选按钮和编辑全部 -->
+
  <view class="header_top">
    <view>
-    <checkbox-group bindchange="">
-      <checkbox value="全选"/>全选
+    <checkbox-group bindchange="Allitemcheck">
+      <checkbox checked="{{allChecked}}"/>全选
     </checkbox-group>
    </view>
    <view class="compileAll" bindtap="compileAll">
@@ -14,46 +15,65 @@
  </view>
  <view class="slide_containter">
     <!-- 快速配速 -->
- <view class="fast_delivery">
-  <checkbox-group bindchange="" >
-    <checkbox value="快速配速"/>快速配速
-  </checkbox-group>
+    <view class="divLine"></view>
+    <view class="fast_delivery">
+      <checkbox-group bindchange="Allitemdelivery" >
+        <checkbox checked="{{hasdelivery}}"/>快速配速
+      </checkbox-group>
+    </view>
+    <!-- 购物车显示 -->
+    <view class="cart_goods" wx:for="{{cartsInfo}}" wx:key="cart_id">
+        <!-- 商品主体信息第一行 -->
+        <view class="cart_herder">
+        <!-- 复选框 -->
+          <view>
+            <checkbox-group bindchange="hasItemchange" data-cartid="{{item._id}}" data-cartcolor="{{item.clothcolor}}" data-cartsize="{{item.clothsize}}">
+              <checkbox checked="{{item.checked}}"/>
+            </checkbox-group>
+          </view>
+          <!-- 修改配送方式 -->
+          <view class="modifyMethods">
+            修改配送方式
+          </view>
+        </view>
+        <!-- 商品主体信息第二行 -->
+        <view class="cart_middle">
+          <!-- 购物车图片 -->
+          <view class="cart_left">
+            <image class="cart_img" src="{{item.imgUrl}}" mode="aspectFill" />
+          </view>
+          <!-- 购物车商品详情 -->
+          <view class="cart_right">
+            <view class="cartRlight_line1">{{item.category}} {{item.name}}</view>
+            <view class="cartRight_line3">颜色: {{item.clothcolor}}</view>
+            <view class="cartRight_line3">尺码: {{item.clothsize}}</view>
+            <view class="cartRight_line4">支持30天无理由退货</view>
+            <view class="cartRight_line5">{{item.price}}</view>
+          </view>
+        </view>
+        <!-- 加减和删除按钮 -->
+        <view class="popCount">
+          <view class="plusMinus">
+            <view class="minus" bindtap="handleCount" data-operation="{{-1}}" data-cartid="{{item._id}}" data-cartcolor="{{item.clothcolor}}" data-cartsize="{{item.clothsize}}">-</view>
+            <view class="count" >{{item.num}}</view>
+            <view class="plus" bindtap="handleCount" data-operation="{{1}}" data-cartid="{{item._id}}" data-cartcolor="{{item.clothcolor}}" data-cartsize="{{item.clothsize}}">+</view>
+            <view class="textenough" bindtap="cartsDelete" data-cartid="{{item._id}}" data-cartcolor="{{item.clothcolor}}" data-cartsize="{{item.clothsize}}">删除</view>
+          </view>
+        </view>
+    </view> 
  </view>
- <!-- 购物车显示 -->
- <block wx:for="{{cartsInfo}}" wx:key="index">
-  <view class="cart_goods">
-    <view class="cart_herder">
-     <!-- 复选框 -->
-     <view>
-       
-       <checkbox-group bindchange="" >
-         <checkbox value=""/>
-       </checkbox-group>
-     </view>
-      <!-- 修改配送方式 -->
-     <view>
-      修改配送方式
-     </view>
-    </view>
-    <view class="cart_middle">
-        <!-- 购物车图片 -->
-      <view class="cart_left">
-        <image></image>
-      </view>
-      <!-- 购物车商品详情 -->
-      <view class="cart_right">
-        
-      </view>
-    </view>
-    <!-- 加减和删除按钮 -->
-    <view class="cart_bottom">
-    </view>
-  </view>
- </block>
  <!-- 计算按钮 -->
- <view>
-
- </view>
+ <view class="compute">
+   <!-- 合计部分 -->
+   <view class="compute_price">
+    <text  space="ensp">合计: </text>
+    <text class="allprice"  space="ensp">￥{{totalPrice}} </text>
+    <text class="free">不含运费</text>
+   </view>
+   <!-- 结算按钮 -->
+   <view class="compute_button" bindtap="zhifu">
+    结算({{totalNum}})
+   </view>
  </view>
 </view>
 
@@ -98,9 +118,9 @@
             <view class="line2">
               <text>{{item.name}}</text>
             </view>
-            <view class="line3">{{item.price}}</view>
+            <view class="line3">￥{{item.price}}</view>
             <view class="line4">限时特优</view>
-            <view class="line5">初上市价格: {{item.InitialPrice}}</view>
+            <view class="line5">初上市价格: ￥{{item.InitialPrice}}</view>
             <view class="star">{{item.star}}</view>
         </view>
       </view>

@@ -6,12 +6,19 @@ page{
   width: 750rpx;
 }
 .header_top {
-  position: fixed;
+  position: sticky;
   display: flex;
+  z-index: 999;
   top: 0;
-  left: 10rpx;
   height: 70rpx;
   width: 100vw;
+  padding-left: 20rpx;
+  background-color: rgb(243,244,245);
+}
+.divLine {
+  background: #E0E3DA;
+  width: 100vw;
+  height: 20rpx;
 }
 .compileAll {
   font-size: 30rpx;
@@ -20,30 +27,141 @@ page{
   text-decoration: underline;
 }
 .slide_containter {
-  position: relative;
-  top: 85rpx;
+  padding-bottom: 100rpx;
   overflow-y: scroll;
 }
 .slide_containter .fast_delivery {
   padding-top: 10rpx;
-  padding-left: 10rpx;
+  padding-left: 20rpx;
   height: 90rpx;
   border-bottom: 1px solid grey;
 }
 .slide_containter .cart_goods{
-  height: 200px;
+  height: 520rpx;
+  border-bottom: 1px solid grey;
 }
 .cart_goods .cart_herder {
   height: 70rpx;
+  width: 100vw;
   display: flex;
-  padding: 20rpx 10rpx 10rpx 10rpx;
+  padding: 20rpx;
   justify-content: space-between;
 }
+.cart_goods .modifyMethods{
+  padding-right: 30rpx;
+  text-decoration: underline;
+}
 .cart_goods .cart_middle {
-  height: 150rpx;
+  height: 300rpx;
+  display: flex;
+}
+.cart_goods .cart_middle .cart_left {
+  height: 280rpx;
+  width: 250rpx;
+  padding-left: 20rpx;
+}
+.cart_goods .cart_middle .cart_left .cart_img {
+  width: 250rpx;
+  height: 250rpx;
+
+}
+.cart_goods .cart_middle .cart_right {
+  flex: 1;
+  height: auto; 
+}
+.cart_goods .cart_middle .cart_right{
+  display: flex;
+  flex-direction: column;
+  padding-left: 20rpx;
+  font-size: 30rpx;
+}
+.cart_middle .cart_right .cartRlight_line1 {
+  height: auto;
+  line-height: 43rpx;
+}
+.cart_middle .cart_right .cartRight_line3 {
+  height: 56rpx;
+  line-height: 56rpx; 
+}
+.cart_middle .cart_right .cartRight_line4 {
+  color: grey;
+  height: 56rpx;
+  line-height: 56rpx;
+}
+.cart_middle .cart_right .cartRight_line5 {
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+}
+/* 加减的样式 */
+.slide_containter .popCount {
+  position: relative;
+  top: 20rpx;
+  box-sizing: border-box;
+  float: right;
+  width: 470rpx;
+  font-size: 35rpx;
+}
+.slide_containter .plusMinus {
+  display: flex;
+}
+.popCount .word {
+  line-height: 100rpx;
+  width:200rpx;
+}
+.slide_containter .popCount .plusMinus view {
+  width: 80rpx;
+  height: 80rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+  text-align: center;
+ 
+}
+.slide_containter .popCount .plusMinus .count{
+  width: 80rpx;
+  height: 60rpx;
+  border: 1px solid grey;
+}
+.slide_containter .popCount .plusMinus .textenough{
+  position: relative;
+  right: -130rpx;
+  font-size: 30rpx;
+  text-decoration: underline;
+  line-height: 80rpx;
+}
+/* 底部固定定位-----计算总价 */
+.compute {
+   display: flex;
+   position: fixed;
+   z-index: 999;
+   bottom: 0;
+   width: 100vw;
+   height: 100rpx;
+   background-color: green;
+}
+.compute .compute_price{
+   flex: 1;
+   line-height: 100rpx;
+}
+.compute .compute_price .allprice {
+  color: red;
+}
+.compute .compute_price .free {
+  font-size: 25rpx;
+  color: grey;
+}
+.compute .compute_button {
+  width: 150rpx;
+  background-color: red;
+  color: #d3d1d1;
+  line-height: 100rpx;
+  text-align: center;
 }
 
 
+
+/* 购物车没有东西时，显示 */
 .header{
   background-color: white;
   height: 400rpx;
