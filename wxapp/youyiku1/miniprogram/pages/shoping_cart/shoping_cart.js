@@ -72,7 +72,6 @@ Page({
     })
     this.setData({
       cartsInfo: carts, 
-      hasCarts: false,
       allChecked:allChecked,
       totalPrice:allPrice,
       totalNum:allNum
@@ -125,6 +124,11 @@ Page({
     // 4. 删除商品
     cartsInfo.splice(index,1);
     // cartsInfo回到缓存中
+    if(cartsInfo.length == 0){
+      this.setData({
+        hasCarts:true
+      })
+    }
     this.setCarts(cartsInfo);
   },
   onLoad: function (options) {
@@ -149,14 +153,14 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    const carts = wx.getStorageSync('carts');
-    if(carts.length > 0){
+    const carts = wx.getStorageSync('carts')||[];
+    if(carts.length != 0){
       this.setData({
         cartsInfo: carts, 
         hasCarts: false,
       });
     }
-  this.setCarts(carts);
+    this.setCarts(carts);
   },
 
   /**
