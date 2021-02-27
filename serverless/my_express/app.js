@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-app.get('/', (req, res) => {
+app.get('/app.js', (req, res) => {
     console.log('Home');
     res.send('hello world');
 })

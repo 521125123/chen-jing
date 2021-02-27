@@ -1,10 +1,8 @@
+#serverless.yml
 component: express # (必填) 引用 component 的名称，当前用到的是 express-tencent 组件
-name: expressDemo # (必填) 组件创建的实例名称
-#组件配置
+name: my_express # (必填) 该 express 组件创建的实例名称
 inputs:
- src:
-   src: ./app.js
- region: ap-guangzhou 
+  region: ap-guangzhou
 # component: express 
 # name: my_express
 # express:
