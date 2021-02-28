@@ -10,10 +10,22 @@ module.exports = {
   resolve: {
     extensions: [".js", ".ts", ".tsx",".css"]
   },
-  entry: ["@babel/polyfill", "./index.tsx"],
+  // entry: ["@babel/polyfill", "./index.tsx"],
+  entry: {
+    app: './index.tsx', // 业务代码
+    vendor: [           // 库   
+      'react',
+      'react-dom',
+      'react-router-dom'
+    ],
+    vendorStyles: [
+      '../node_modules/bootstrap/dist/css/bootstrap.css'
+    ]
+  },
   output: {
     path: path.join(basePath, "dist"),
-    filename: "bundle.js"
+    filename: "[name].js" // 多个  动态名字打包
+    // filename: "bundle.js"
   },
   devtool: "source-map",
   devServer: {

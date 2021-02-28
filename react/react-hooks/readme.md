@@ -70,3 +70,34 @@
     // react 16 魔法函数 方便 this. this.setState
     setName 相当于 this.setState({})
     const [name, setName] = React.useState('defaultUserName')//state
+
+2021/2/28::
+- npm i react-router react-router-dom @types/react-router @types/react-router-dom
+/about
+<Switch>
+    path="/about"
+    path="/about/:id"
+</Switch>
+- exact 完全一样
+
+- 大型项目的编写风格
+    components 提供  index.tsx
+    文档一样, 把这个目录的所有组件向外输出
+
+- webpack 的优化
+    1. entry 可以有多个入口
+        引入的文件都可以打包到最后的output中
+    2. bootstrap 引入是通过webpack 引入的 
+        index.html app.tsx 不用引入
+    3. vendor [router, react, react-router-dom]
+        lib 不用反复编译， 
+        组件是会变的
+        不用反复去打包 lib,而业务每次都要打包
+
+- react-router 嵌套路由
+    分级 两到三级
+    / -> Header  Route / 
+        / Alums  专辑列表   Switch 只匹配一个
+            /Albums:id  某人专辑
+
+- 应用的api应该统一放到
