@@ -96,8 +96,8 @@
 
 - react-router 嵌套路由
     分级 两到三级
-    / -> Header  Route / 
+    / -> Header  Route /   App  {props.chidren}
         / Alums  专辑列表   Switch 只匹配一个
             /Albums:id  某人专辑
 
-- 应用的api应该统一放到
+- 应用的api应该统一放到api/ 目录下

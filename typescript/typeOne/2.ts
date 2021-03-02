@@ -2,7 +2,7 @@
 interface User {
     name: string,
     age: number,
-    occupation?: string,
+    occupation: string,
 }
 interface Amdin {
     name: string,

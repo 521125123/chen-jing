@@ -41,5 +41,7 @@ interface User {
       if(isUser(person)){
         additionalInformation = person.occupation
       }    
+      console.log(`- ${person.name},${person.age},${additionalInformation}`)
   }
-  
+  console.log('persons:')
+  persons.forEach(logPerson);

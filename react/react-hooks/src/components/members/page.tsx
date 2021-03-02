@@ -11,7 +11,7 @@ interface State {
     members: MemberEntity[];
 }
 interface Props {
-
+ 
 }
 export class MemberPage extends React.Component<Props,State> {
   constructor(props) {

@@ -4,7 +4,7 @@ import { App } from './app2';
 import { About, MemberPage } from './components';
 
 // hash  history 
-export const AppRouter: React.FC = () => {
+export const AppRouter: React.FC<{}> = () => {
   return (
     <HashRouter>
       <div className="container-fluid">
