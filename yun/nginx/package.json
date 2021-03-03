@@ -1,0 +1,15 @@
+{
+  "name": "nginx",
+  "version": "1.0.0",
+  "description": "nginx  静态网页  http服务  html\r 动态 node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.1"
+  }
+}
