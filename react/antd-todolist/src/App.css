@@ -1,5 +1,6 @@
-@import '~antd/dist/antd.css'; 
+/* @import '~antd/dist/antd.css';  */
 /* ~找到node_modules */
+@import '~semantic-ui-css/semantic.min.css';
 .App {
   text-align: center;
 }
