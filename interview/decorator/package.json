@@ -1,0 +1,12 @@
+{
+  "name": "decorator",
+  "version": "1.0.0",
+  "description": "京东考题\r Es7\r - annotation\r bufferr node\r html, \r babel + es6 比较新的特性\r 装饰器 python 等语言\r 装饰一下",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

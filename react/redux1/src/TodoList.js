@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import store from './store';
 import { changeInputAction, addItemAction, deleteItemAction } from './store/actionCreators';
 import TodoListUI from './TodoListUI';
+import axios from 'axios';
 class TodoList extends Component {
     constructor(props) {
         super(props)
@@ -26,6 +27,11 @@ class TodoList extends Component {
             />
         );
     }
+    // componentDidMount() {   // axios取数据
+    //     axios.get('https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList').then((res) => {
+    //         console.log(res,'pppp')
+    //     })
+    // }
     changeInputValue(e) {
         // console.log(e.target.value)
         // const action = {
