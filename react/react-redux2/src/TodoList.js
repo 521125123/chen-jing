@@ -1,32 +1,37 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 
-
-class TodoList extends Component {
-    constructor(props) {
-        super(props);
-    }
-    render() { 
+const TodoList = (props) => {
+    let { inputValue, inputChange,addItem,list} = props
         return (
             <div>
                <div>
-                   <input value={this.props.inputValue} onChange={this.props.inputChange} />
-                   <button>提交</button>
+                   <input 
+                   value={inputValue} 
+                   onChange={inputChange} 
+                   />
+                   <button onClick={addItem}>提交</button>
                </div>
                <ul>
-                   <li>
-                       明平贵
-                   </li>
+                   {
+                       list.map((item,index) => {
+                           return (
+                           <li 
+                           key={index}
+                           >
+                               {item}
+                            </li>
+                           )
+                       })
+                   }
                </ul>
             </div>
         );
-    }
-    
 }
-
 const stateToProps = (state) => {
     return {
-        inputValue: state.inputValue
+        inputValue: state.inputValue,
+        list: state.list
     }
 }
 const dispatchToProps = (dispatch) => {
@@ -36,7 +41,12 @@ const dispatchToProps = (dispatch) => {
                 type: 'change_input',
                 value: e.target.value
             }
-        }
+            dispatch(action)
+        },
+        addItem() {
+            let action = {type: 'add_item'}
+            dispatch(action)
+        },
     }
 }
  
