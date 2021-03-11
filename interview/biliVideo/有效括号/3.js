@@ -25,9 +25,14 @@ function longPipei(s) {
             // max = max<tmpMax?tmpMax:max 
             max = max>tmpMax?max:tmpMax 
         }
+        if(stack.length > 0) {
+            max = max>(tmpMax-stack.length)?max:(tmpMax-stack.length)
+        }
         stack = []; 
     }
     return max;
 }
-var s = ')()()('
+var s = ')()()()(((()'
+var s1 = '((())(())'
 console.log(longPipei(s));
+console.log(longPipei(s1));
