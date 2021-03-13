@@ -1,4 +1,4 @@
-function longPipei(s) {
+function longestValidParentheses(s) {
     // 时间复杂为O(n)
     var max = 0;
     if(s.length == 0 || s.length == 1) return max;
